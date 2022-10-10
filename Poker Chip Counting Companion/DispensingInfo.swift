@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  DispensingInfo.swift
 //  Poker Chip Counting Companion
 //
 //  Created by Adish Patil on 10/9/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct DispensingInfo: View {
     var body: some View {
         //StatusBar / iPhone 13
         VStack{
@@ -50,8 +50,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct DispensingInfo_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        DispensingInfo()
     }
 }

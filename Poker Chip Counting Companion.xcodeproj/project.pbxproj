@@ -11,6 +11,8 @@
 		450FDCAF28F359E90003F470 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FDCAE28F359E90003F470 /* ContentView.swift */; };
 		450FDCB128F359EB0003F470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450FDCB028F359EB0003F470 /* Assets.xcassets */; };
 		450FDCB428F359EB0003F470 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450FDCB328F359EB0003F470 /* Preview Assets.xcassets */; };
+		450FDCBB28F389A60003F470 /* PokerLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FDCBA28F389A60003F470 /* PokerLogo.swift */; };
+		450FDCD928F3BFA20003F470 /* DispensingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FDCD828F3BFA20003F470 /* DispensingInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		450FDCAE28F359E90003F470 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		450FDCB028F359EB0003F470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		450FDCB328F359EB0003F470 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		450FDCBA28F389A60003F470 /* PokerLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerLogo.swift; sourceTree = "<group>"; };
+		450FDCD828F3BFA20003F470 /* DispensingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispensingInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +57,9 @@
 			children = (
 				450FDCAC28F359E90003F470 /* Poker_Chip_Counting_CompanionApp.swift */,
 				450FDCAE28F359E90003F470 /* ContentView.swift */,
+				450FDCD828F3BFA20003F470 /* DispensingInfo.swift */,
 				450FDCB028F359EB0003F470 /* Assets.xcassets */,
+				450FDCBA28F389A60003F470 /* PokerLogo.swift */,
 				450FDCB228F359EB0003F470 /* Preview Content */,
 			);
 			path = "Poker Chip Counting Companion";
@@ -138,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				450FDCAF28F359E90003F470 /* ContentView.swift in Sources */,
+				450FDCBB28F389A60003F470 /* PokerLogo.swift in Sources */,
 				450FDCAD28F359E90003F470 /* Poker_Chip_Counting_CompanionApp.swift in Sources */,
+				450FDCD928F3BFA20003F470 /* DispensingInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
