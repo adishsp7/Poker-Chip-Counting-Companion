@@ -9,7 +9,8 @@ import SwiftUI
 
 struct PokerLogo: View {
     var body: some View {
-        Image("casino-chip")
+//        Image("casino-chip")
+          Image("poker-chip")
             .resizable()
             .frame(width: 200, height: 200)
             .aspectRatio(CGSize(width: 1, height: 1), contentMode: .fit)

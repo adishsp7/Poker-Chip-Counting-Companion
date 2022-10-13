@@ -12,6 +12,8 @@ struct Poker_Chip_Counting_CompanionApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(Data())
+//            DispensingInfo()
         }
     }
 }

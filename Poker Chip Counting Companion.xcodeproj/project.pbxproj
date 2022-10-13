@@ -13,6 +13,11 @@
 		450FDCB428F359EB0003F470 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450FDCB328F359EB0003F470 /* Preview Assets.xcassets */; };
 		450FDCBB28F389A60003F470 /* PokerLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FDCBA28F389A60003F470 /* PokerLogo.swift */; };
 		450FDCD928F3BFA20003F470 /* DispensingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FDCD828F3BFA20003F470 /* DispensingInfo.swift */; };
+		450FDD0328F7309B0003F470 /* Dispensing Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FDD0228F7309B0003F470 /* Dispensing Queue.swift */; };
+		450FDD2128F7CCB30003F470 /* Buyin_Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FDD2028F7CCB30003F470 /* Buyin_Table.swift */; };
+		450FDD2328F7D4870003F470 /* Collection_Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FDD2228F7D4870003F470 /* Collection_Queue.swift */; };
+		450FDD2528F7D5D90003F470 /* Buyout_Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FDD2428F7D5D90003F470 /* Buyout_Table.swift */; };
+		450FDD2728F7E6180003F470 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FDD2628F7E6180003F470 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,11 @@
 		450FDCB328F359EB0003F470 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		450FDCBA28F389A60003F470 /* PokerLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerLogo.swift; sourceTree = "<group>"; };
 		450FDCD828F3BFA20003F470 /* DispensingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispensingInfo.swift; sourceTree = "<group>"; };
+		450FDD0228F7309B0003F470 /* Dispensing Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dispensing Queue.swift"; sourceTree = "<group>"; };
+		450FDD2028F7CCB30003F470 /* Buyin_Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buyin_Table.swift; sourceTree = "<group>"; };
+		450FDD2228F7D4870003F470 /* Collection_Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection_Queue.swift; sourceTree = "<group>"; };
+		450FDD2428F7D5D90003F470 /* Buyout_Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buyout_Table.swift; sourceTree = "<group>"; };
+		450FDD2628F7E6180003F470 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +65,14 @@
 		450FDCAB28F359E90003F470 /* Poker Chip Counting Companion */ = {
 			isa = PBXGroup;
 			children = (
-				450FDCAC28F359E90003F470 /* Poker_Chip_Counting_CompanionApp.swift */,
 				450FDCAE28F359E90003F470 /* ContentView.swift */,
 				450FDCD828F3BFA20003F470 /* DispensingInfo.swift */,
+				450FDD0228F7309B0003F470 /* Dispensing Queue.swift */,
+				450FDD2028F7CCB30003F470 /* Buyin_Table.swift */,
+				450FDD2228F7D4870003F470 /* Collection_Queue.swift */,
+				450FDD2428F7D5D90003F470 /* Buyout_Table.swift */,
+				450FDCAC28F359E90003F470 /* Poker_Chip_Counting_CompanionApp.swift */,
+				450FDD2628F7E6180003F470 /* Data.swift */,
 				450FDCB028F359EB0003F470 /* Assets.xcassets */,
 				450FDCBA28F389A60003F470 /* PokerLogo.swift */,
 				450FDCB228F359EB0003F470 /* Preview Content */,
@@ -147,6 +162,11 @@
 				450FDCBB28F389A60003F470 /* PokerLogo.swift in Sources */,
 				450FDCAD28F359E90003F470 /* Poker_Chip_Counting_CompanionApp.swift in Sources */,
 				450FDCD928F3BFA20003F470 /* DispensingInfo.swift in Sources */,
+				450FDD2528F7D5D90003F470 /* Buyout_Table.swift in Sources */,
+				450FDD2328F7D4870003F470 /* Collection_Queue.swift in Sources */,
+				450FDD2128F7CCB30003F470 /* Buyin_Table.swift in Sources */,
+				450FDD2728F7E6180003F470 /* Data.swift in Sources */,
+				450FDD0328F7309B0003F470 /* Dispensing Queue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
