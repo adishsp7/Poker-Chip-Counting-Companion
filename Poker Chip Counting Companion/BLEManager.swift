@@ -5,6 +5,9 @@
 //  Created by Adish Patil on 10/13/22.
 //
 
+//THIS VIEW CODE WAS ADAPTED FROM A BLE Swift TUTORIAL ONLINE
+//https://novelbits.io/intro-ble-mobile-development-ios-part-2/
+
 import Foundation
 import CoreBluetooth
 struct Peripheral: Identifiable {
