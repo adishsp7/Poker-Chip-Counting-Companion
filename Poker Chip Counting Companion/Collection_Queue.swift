@@ -8,6 +8,19 @@
 import SwiftUI
 
 struct Collection_Queue: View {
+    
+    //button action variable
+    @State private var action: Int? = 0
+    @State private var disable1: Bool = false
+    @State private var disable2: Bool = true
+    @State private var disable3: Bool = true
+    @State private var disable4: Bool = true
+    @State private var disable5: Bool = true
+    @State private var disable6: Bool = true
+    @State private var disable7: Bool = true
+    @State private var disable8: Bool = true
+    
+    
     var body: some View {
         NavigationStack{
             
@@ -23,9 +36,12 @@ struct Collection_Queue: View {
                     Spacer()
                     Button("Collect"){
                         print("hello")
+                        disable1 = true
+                        disable2 = false
                     }
                     .font(.title)
-                    .foregroundColor(.red)
+                    .foregroundColor(disable1 ? .gray : .red)
+                    .disabled(disable1)
                     Spacer()
                 }
                 .padding(.bottom, 20.0)
@@ -36,9 +52,12 @@ struct Collection_Queue: View {
                     Spacer()
                     Button("Collect"){
                         print("hello")
+                        disable2 = true
+                        disable3 = false
                     }
                     .font(.title)
-                    .foregroundColor(.red)
+                    .foregroundColor(disable2 ? .gray : .red)
+                    .disabled(disable2)
                     Spacer()
                 }
                 .padding(.bottom, 20.0)
@@ -50,9 +69,12 @@ struct Collection_Queue: View {
                     Spacer()
                     Button("Collect"){
                         print("hello")
+                        disable3 = true
+                        disable4 = false
                     }
                     .font(.title)
-                    .foregroundColor(.red)
+                    .foregroundColor(disable3 ? .gray : .red)
+                    .disabled(disable3)
                     Spacer()
                 }
                 .padding(.bottom, 20.0)
@@ -64,9 +86,12 @@ struct Collection_Queue: View {
                     Spacer()
                     Button("Collect"){
                         print("hello")
+                        disable4 = true
+                        disable5 = false
                     }
                     .font(.title)
-                    .foregroundColor(.red)
+                    .foregroundColor(disable4 ? .gray : .red)
+                    .disabled(disable4)
                     Spacer()
                 }
                 .padding(.bottom, 20.0)
@@ -78,9 +103,12 @@ struct Collection_Queue: View {
                     Spacer()
                     Button("Collect"){
                         print("hello")
+                        disable5 = true
+                        disable6 = false
                     }
                     .font(.title)
-                    .foregroundColor(.red)
+                    .foregroundColor(disable5 ? .gray : .red)
+                    .disabled(disable5)
                     Spacer()
                 }
                 .padding(.bottom, 20.0)
@@ -92,9 +120,12 @@ struct Collection_Queue: View {
                     Spacer()
                     Button("Collect"){
                         print("hello")
+                        disable6 = true
+                        disable7 = false
                     }
                     .font(.title)
-                    .foregroundColor(.red)
+                    .foregroundColor(disable6 ? .gray : .red)
+                    .disabled(disable6)
                     Spacer()
                 }
                 .padding(.bottom, 20.0)
@@ -106,9 +137,12 @@ struct Collection_Queue: View {
                     Spacer()
                     Button("Collect"){
                         print("hello")
+                        disable7 = true
+                        disable8 = false
                     }
                     .font(.title)
-                    .foregroundColor(.red)
+                    .foregroundColor(disable7 ? .gray : .red)
+                    .disabled(disable7)
                     Spacer()
                 }
                 .padding(.bottom, 20.0)
@@ -120,9 +154,11 @@ struct Collection_Queue: View {
                     Spacer()
                     Button("Collect"){
                         print("hello")
+                        disable8 = true
                     }
                     .font(.title)
-                    .foregroundColor(.red)
+                    .foregroundColor(disable8 ? .gray : .red)
+                    .disabled(disable8)
                     Spacer()
                 }
                 .padding(.bottom, 20.0)

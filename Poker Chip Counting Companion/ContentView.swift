@@ -16,7 +16,7 @@ struct ContentView: View {
         NavigationStack{
             
             ZStack{
-//                Image("background").ignoresSafeArea()
+                Image("background").ignoresSafeArea()
                 
                 //StatusBar / iPhone 13
                 VStack{
@@ -27,12 +27,14 @@ struct ContentView: View {
                     
                     PokerLogo()
                         .offset(y:-130)
-                        .padding(.bottom, -100)
+                        .padding(.bottom, -90)
+                        .padding(.top, 50)
+                    
                     
                     
                     NavigationLink("Poker Chip \n Counting Companion", destination: DispensingInfo())
                         .padding(.all)
-                        .font(.largeTitle)
+                        .font(.largeTitle.weight(.semibold))
 //                        .background(Color.white)
                     
                     //            NavigationView(content: NavigationLink("button", destination: DispensingInfo()))
@@ -58,14 +60,24 @@ struct ContentView: View {
                         
                         Divider()
                         VStack (alignment: .center){
-                            Text("Click the button to begin.")
+                            Text("Click the title to begin.")
                                 .foregroundColor(.primary)
                                 .font(.title2)
                                 .padding(.bottom)
+                                .fontWeight(.semibold)
+                            
                             Text("NATIONAL PROBLEM GAMBLING HELPLINE \n                       1-800-522-4700")
                                 .fontWeight(.regular)
                                 .foregroundColor(.red)
-                                .font(.subheadline)
+                                .font(.headline)
+                                .padding(.bottom)
+                                .fontWeight(.bold)
+                            
+                            NavigationLink("Bluetooth Connection", destination: BLE_View())
+                                .padding(.all)
+                                .font(.headline)
+                                .fontWeight(.semibold)
+                            
                         }
                     }
                 }
