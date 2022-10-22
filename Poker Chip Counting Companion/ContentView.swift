@@ -73,11 +73,16 @@ struct ContentView: View {
                                 .padding(.bottom)
                                 .fontWeight(.bold)
                             
-                            NavigationLink("Bluetooth Connection", destination: BLE_View())
+//                            NavigationLink("Bluetooth Connection", destination: BLE_View())
+//                                .padding(.all)
+//                                .font(.headline)
+//                                .fontWeight(.semibold)
+                            
+                            NavigationLink("Bluetooth Connection", destination: MainView())
                                 .padding(.all)
                                 .font(.headline)
                                 .fontWeight(.semibold)
-                            
+
                         }
                     }
                 }

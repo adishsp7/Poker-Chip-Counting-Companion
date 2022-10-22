@@ -13,7 +13,7 @@ struct Poker_Chip_Counting_CompanionApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(Data())
-//            DispensingInfo()
+//            MainView()
         }
     }
 }

@@ -39,6 +39,11 @@ class Data: ObservableObject {
     var p7_buyin_int:Int = 0
     var p8_buyin_int:Int = 0
     
+    var p1_red_chips:Int = 0
+    var p1_blue_chips:Int = 0
+    var p1_green_chips:Int = 0
+    var p1_white_chips:Int = 0
+    
     func data_store(){
         
         //store values in static ints
@@ -65,6 +70,7 @@ class Data: ObservableObject {
         
         //buy-in
         p1_buyin_int = Int(p1_buyin) ?? 0
+        (p1_red_chips, p1_white_chips, p1_green_chips, p1_blue_chips) = chip_calc(buyin: p1_buyin_int)
         print(p1_buyin_int)
         
         p2_buyin_int = Int(p2_buyin) ?? 0
@@ -88,6 +94,74 @@ class Data: ObservableObject {
         p8_buyin_int = Int(p8_buyin) ?? 0
         print(p8_buyin_int)
     
+    }
+//
+    func chip_calc(buyin: Int) -> (red: Int, blue:Int, green:Int, white:Int){
+        
+        var array = [red_value_int, white_value_int, green_value_int, blue_value_int]
+        var buy_in:Int = buyin
+        var offset:Int
+        var chipcount = [Int]()
+        
+        array.sort(by: >)
+        for val in array{
+            if(val != 1){
+                if(val == array[0]){
+                    offset = 5
+                }
+                else if(val == array[1]){
+                    offset = 5
+                }
+                else{
+                    offset = 2
+                }
+                let r = Int(floor(Double(buyin) / Double(val)))
+                if(r > 0){
+                    chipcount.append(r-offset)
+                    buy_in -= (val * (r-offset))
+                }
+                else if(r <= 0){
+                    chipcount.append(0)
+                }
+            }
+            else{
+                chipcount.append(buy_in)
+            }
+        }
+        let rc = chipcount[0]
+        let wc = chipcount[1]
+        let gc = chipcount[2]
+        let bc = chipcount[3]
+        
+        return(rc, wc, gc, bc)
+        
+
+//        buyin = 253
+//        c = [1,5,10,25]
+//        c = c[::-1]
+//        def chips(buyin):
+//            num_each = []
+//            c = [25,10,5,1]
+//            for chip in c:
+//                if (chip!=1):
+//                    if chip == c[0]:
+//                        offset = 5
+//                    elif chip == c[1]:
+//                        offset = 5
+//                    else:
+//                        offset = 2
+//                    R = buyin//chip
+//                    if (R>0):
+//                        num_each += [R-offset]
+//                        buyin -= chip * (R-offset)
+//                    elif(R<=0):
+//                        num_each += [0]
+//                else:
+//                    num_each += [buyin]
+//
+//            return num_each
+//        s = 0
+//        chips(250)
     }
     
 }

@@ -20,6 +20,12 @@
 		450FDD2728F7E6180003F470 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FDD2628F7E6180003F470 /* Data.swift */; };
 		45A0C6F828F8D1FD00469507 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A0C6F728F8D1FD00469507 /* BLEManager.swift */; };
 		45A0C6FA28FA028B00469507 /* BLE_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A0C6F928FA028B00469507 /* BLE_View.swift */; };
+		45ED82D029036831007D7E52 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED82CF29036831007D7E52 /* BluetoothManager.swift */; };
+		45ED82D229036963007D7E52 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED82D129036963007D7E52 /* MainView.swift */; };
+		45ED82D42903697C007D7E52 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED82D32903697C007D7E52 /* MainViewModel.swift */; };
+		45ED82D6290369C6007D7E52 /* DevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED82D5290369C6007D7E52 /* DevicesView.swift */; };
+		45ED82D8290369E8007D7E52 /* DevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED82D7290369E8007D7E52 /* DevicesViewModel.swift */; };
+		45ED82DA29036A23007D7E52 /* Set+Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED82D929036A23007D7E52 /* Set+Cancellable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +43,12 @@
 		450FDD2628F7E6180003F470 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		45A0C6F728F8D1FD00469507 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
 		45A0C6F928FA028B00469507 /* BLE_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLE_View.swift; sourceTree = "<group>"; };
+		45ED82CF29036831007D7E52 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		45ED82D129036963007D7E52 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		45ED82D32903697C007D7E52 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		45ED82D5290369C6007D7E52 /* DevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesView.swift; sourceTree = "<group>"; };
+		45ED82D7290369E8007D7E52 /* DevicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewModel.swift; sourceTree = "<group>"; };
+		45ED82D929036A23007D7E52 /* Set+Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Set+Cancellable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,16 +81,22 @@
 		450FDCAB28F359E90003F470 /* Poker Chip Counting Companion */ = {
 			isa = PBXGroup;
 			children = (
+				450FDCAC28F359E90003F470 /* Poker_Chip_Counting_CompanionApp.swift */,
+				450FDD2628F7E6180003F470 /* Data.swift */,
 				450FDCAE28F359E90003F470 /* ContentView.swift */,
-				45A0C6F928FA028B00469507 /* BLE_View.swift */,
 				450FDCD828F3BFA20003F470 /* DispensingInfo.swift */,
 				450FDD0228F7309B0003F470 /* Dispensing Queue.swift */,
 				450FDD2028F7CCB30003F470 /* Buyin_Table.swift */,
 				450FDD2228F7D4870003F470 /* Collection_Queue.swift */,
 				450FDD2428F7D5D90003F470 /* Buyout_Table.swift */,
-				450FDCAC28F359E90003F470 /* Poker_Chip_Counting_CompanionApp.swift */,
-				450FDD2628F7E6180003F470 /* Data.swift */,
+				45A0C6F928FA028B00469507 /* BLE_View.swift */,
 				45A0C6F728F8D1FD00469507 /* BLEManager.swift */,
+				45ED82CF29036831007D7E52 /* BluetoothManager.swift */,
+				45ED82D129036963007D7E52 /* MainView.swift */,
+				45ED82D32903697C007D7E52 /* MainViewModel.swift */,
+				45ED82D929036A23007D7E52 /* Set+Cancellable.swift */,
+				45ED82D5290369C6007D7E52 /* DevicesView.swift */,
+				45ED82D7290369E8007D7E52 /* DevicesViewModel.swift */,
 				450FDCB028F359EB0003F470 /* Assets.xcassets */,
 				450FDCBA28F389A60003F470 /* PokerLogo.swift */,
 				450FDCB228F359EB0003F470 /* Preview Content */,
@@ -164,16 +182,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45ED82D8290369E8007D7E52 /* DevicesViewModel.swift in Sources */,
 				450FDCAF28F359E90003F470 /* ContentView.swift in Sources */,
+				45ED82D229036963007D7E52 /* MainView.swift in Sources */,
 				450FDCBB28F389A60003F470 /* PokerLogo.swift in Sources */,
 				45A0C6FA28FA028B00469507 /* BLE_View.swift in Sources */,
 				450FDCAD28F359E90003F470 /* Poker_Chip_Counting_CompanionApp.swift in Sources */,
 				450FDCD928F3BFA20003F470 /* DispensingInfo.swift in Sources */,
+				45ED82D6290369C6007D7E52 /* DevicesView.swift in Sources */,
 				450FDD2528F7D5D90003F470 /* Buyout_Table.swift in Sources */,
+				45ED82D42903697C007D7E52 /* MainViewModel.swift in Sources */,
 				450FDD2328F7D4870003F470 /* Collection_Queue.swift in Sources */,
 				450FDD2128F7CCB30003F470 /* Buyin_Table.swift in Sources */,
 				45A0C6F828F8D1FD00469507 /* BLEManager.swift in Sources */,
 				450FDD2728F7E6180003F470 /* Data.swift in Sources */,
+				45ED82DA29036A23007D7E52 /* Set+Cancellable.swift in Sources */,
+				45ED82D029036831007D7E52 /* BluetoothManager.swift in Sources */,
 				450FDD0328F7309B0003F470 /* Dispensing Queue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,14 +327,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Poker Chip Counting Companion/Preview Content\"";
+				DEVELOPMENT_TEAM = W4ZFFVWL4J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Allow to Connect to Bliuetooth Device";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Connect to Bluetooth Device";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Allow to Connect to Bluetooth Device";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,14 +359,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Poker Chip Counting Companion/Preview Content\"";
+				DEVELOPMENT_TEAM = W4ZFFVWL4J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Allow to Connect to Bliuetooth Device";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Connect to Bluetooth Device";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Allow to Connect to Bluetooth Device";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
