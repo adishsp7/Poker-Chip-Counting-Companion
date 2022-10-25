@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     //button action variable
     @State private var action: Int? = 0
+//
+//    @EnvironmentObject var manager:BluetoothManager
     
     //Logo Screen View
     var body: some View {
@@ -78,10 +80,15 @@ struct ContentView: View {
 //                                .font(.headline)
 //                                .fontWeight(.semibold)
                             
-                            NavigationLink("Bluetooth Connection", destination: MainView())
-                                .padding(.all)
-                                .font(.headline)
-                                .fontWeight(.semibold)
+//                            NavigationLink("Bluetooth Connection", destination: MainView())
+//                                .padding(.all)
+//                                .font(.headline)
+//                                .fontWeight(.semibold)
+                            
+//                            Button("Connect to Bluetooth", action: manager.init_centralmanager)
+//                                                            .padding(.all)
+//                                                            .font(.headline)
+//                                                            .fontWeight(.semibold)
 
                         }
                     }

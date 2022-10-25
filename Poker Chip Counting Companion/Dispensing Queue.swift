@@ -1,6 +1,7 @@
 import Foundation
 import UIKit
 import SwiftUI
+import CoreBluetooth
 
 
 struct Dispensing_Queue: View {
@@ -15,10 +16,15 @@ struct Dispensing_Queue: View {
     @State private var disable7: Bool = true
     @State private var disable8: Bool = true
     
+    @State private var manager: BluetoothManager = .shared
+    
+//    @EnvironmentObject var manager:BluetoothManager
+    
     
     //Logo Screen View
     var body: some View {
         NavigationStack{
+            
             
             VStack{
                 
@@ -32,6 +38,8 @@ struct Dispensing_Queue: View {
                     Spacer()
                     Button("Dispense"){
                         print("hello")
+                        manager.init_centralmanager()
+                        manager.writeOutgoingValue(data: "hello")
                         disable1 = true
                         disable2 = false
                     }

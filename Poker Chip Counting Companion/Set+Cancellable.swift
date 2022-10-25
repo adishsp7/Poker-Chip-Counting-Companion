@@ -1,20 +1,20 @@
+////
+////  Set+Cancellable.swift
+////  Poker Chip Counting Companion
+////
+////  Created by Adish Patil on 10/21/22.
+////
 //
-//  Set+Cancellable.swift
-//  Poker Chip Counting Companion
+////
+////  Created by Artem Novichkov on 31.05.2021.
+////
 //
-//  Created by Adish Patil on 10/21/22.
+//import Combine
 //
-
+//extension Set where Element: Cancellable {
 //
-//  Created by Artem Novichkov on 31.05.2021.
+//    func cancel() {
+//        forEach { $0.cancel() }
+//    }
+//}
 //
-
-import Combine
-
-extension Set where Element: Cancellable {
-
-    func cancel() {
-        forEach { $0.cancel() }
-    }
-}
-

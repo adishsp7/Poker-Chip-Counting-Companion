@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import CoreBluetooth
 
 class Data: ObservableObject {
     @Published var red_value = ""
@@ -23,6 +24,10 @@ class Data: ObservableObject {
     @Published var p6_buyin = ""
     @Published var p7_buyin = ""
     @Published var p8_buyin = ""
+    
+    var peripheral: CBPeripheral?
+    
+    var state:Int = 0
     
     var red_value_int:Int = 0
     var white_value_int:Int = 0
@@ -93,6 +98,8 @@ class Data: ObservableObject {
         
         p8_buyin_int = Int(p8_buyin) ?? 0
         print(p8_buyin_int)
+        
+        state = 0
     
     }
 //

@@ -18,6 +18,7 @@
 		450FDD2328F7D4870003F470 /* Collection_Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FDD2228F7D4870003F470 /* Collection_Queue.swift */; };
 		450FDD2528F7D5D90003F470 /* Buyout_Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FDD2428F7D5D90003F470 /* Buyout_Table.swift */; };
 		450FDD2728F7E6180003F470 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FDD2628F7E6180003F470 /* Data.swift */; };
+		45858F1629075FA0000A0591 /* CBUUIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45858F1529075FA0000A0591 /* CBUUIDs.swift */; };
 		45A0C6F828F8D1FD00469507 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A0C6F728F8D1FD00469507 /* BLEManager.swift */; };
 		45A0C6FA28FA028B00469507 /* BLE_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A0C6F928FA028B00469507 /* BLE_View.swift */; };
 		45ED82D029036831007D7E52 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED82CF29036831007D7E52 /* BluetoothManager.swift */; };
@@ -41,6 +42,7 @@
 		450FDD2228F7D4870003F470 /* Collection_Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection_Queue.swift; sourceTree = "<group>"; };
 		450FDD2428F7D5D90003F470 /* Buyout_Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buyout_Table.swift; sourceTree = "<group>"; };
 		450FDD2628F7E6180003F470 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		45858F1529075FA0000A0591 /* CBUUIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBUUIDs.swift; sourceTree = "<group>"; };
 		45A0C6F728F8D1FD00469507 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
 		45A0C6F928FA028B00469507 /* BLE_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLE_View.swift; sourceTree = "<group>"; };
 		45ED82CF29036831007D7E52 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				45A0C6F928FA028B00469507 /* BLE_View.swift */,
 				45A0C6F728F8D1FD00469507 /* BLEManager.swift */,
 				45ED82CF29036831007D7E52 /* BluetoothManager.swift */,
+				45858F1529075FA0000A0591 /* CBUUIDs.swift */,
 				45ED82D129036963007D7E52 /* MainView.swift */,
 				45ED82D32903697C007D7E52 /* MainViewModel.swift */,
 				45ED82D929036A23007D7E52 /* Set+Cancellable.swift */,
@@ -193,6 +196,7 @@
 				450FDD2528F7D5D90003F470 /* Buyout_Table.swift in Sources */,
 				45ED82D42903697C007D7E52 /* MainViewModel.swift in Sources */,
 				450FDD2328F7D4870003F470 /* Collection_Queue.swift in Sources */,
+				45858F1629075FA0000A0591 /* CBUUIDs.swift in Sources */,
 				450FDD2128F7CCB30003F470 /* Buyin_Table.swift in Sources */,
 				45A0C6F828F8D1FD00469507 /* BLEManager.swift in Sources */,
 				450FDD2728F7E6180003F470 /* Data.swift in Sources */,

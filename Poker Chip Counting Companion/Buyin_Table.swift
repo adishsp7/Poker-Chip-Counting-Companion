@@ -340,7 +340,7 @@ struct Buyin_Table: View {
                     .frame(maxWidth: 331)
                 }
                 .padding(.bottom, -10.0)
-                
+//                Button("Collect")
                 NavigationLink("Start Collection", destination: Collection_Queue())
                     .padding(.all)
                     .font(.largeTitle)
