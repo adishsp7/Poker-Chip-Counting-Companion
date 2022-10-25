@@ -331,7 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Poker Chip Counting Companion/Preview Content\"";
-				DEVELOPMENT_TEAM = W4ZFFVWL4J;
+				DEVELOPMENT_TEAM = 9GAYJN9L5J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Connect to Bluetooth Device";
@@ -363,7 +363,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Poker Chip Counting Companion/Preview Content\"";
-				DEVELOPMENT_TEAM = W4ZFFVWL4J;
+				DEVELOPMENT_TEAM = 9GAYJN9L5J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Connect to Bluetooth Device";

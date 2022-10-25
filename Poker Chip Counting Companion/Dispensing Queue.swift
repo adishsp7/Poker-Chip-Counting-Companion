@@ -16,7 +16,7 @@ struct Dispensing_Queue: View {
     @State private var disable7: Bool = true
     @State private var disable8: Bool = true
     
-    @State private var manager: BluetoothManager = .shared
+    @ObservedObject var manager = BluetoothManager()
     
 //    @EnvironmentObject var manager:BluetoothManager
     
@@ -38,7 +38,6 @@ struct Dispensing_Queue: View {
                     Spacer()
                     Button("Dispense"){
                         print("hello")
-                        manager.init_centralmanager()
                         manager.writeOutgoingValue(data: "hello")
                         disable1 = true
                         disable2 = false
