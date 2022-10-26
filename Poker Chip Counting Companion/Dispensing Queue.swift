@@ -16,9 +16,12 @@ struct Dispensing_Queue: View {
     @State private var disable7: Bool = true
     @State private var disable8: Bool = true
     
-    @ObservedObject var manager = BluetoothManager()
-    
+//    @ObservedObject private var manager = BluetoothManager.shared
 //    @EnvironmentObject var manager:BluetoothManager
+//    @ObservedObject var bleManager1 = BLEManager()
+    
+    @EnvironmentObject var bleManager1:BLEManager
+    @EnvironmentObject var data:Data
     
     
     //Logo Screen View
@@ -30,15 +33,27 @@ struct Dispensing_Queue: View {
                 
                 //Chip Dispense
                 Text("Chip Dispense").font(.system(size: 35, weight: .bold)).underline().foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 1))).padding(.vertical, 40.0)
-
+                
+                
+                
                 HStack{
                     //Player_1
                     Spacer()
                     Text("Player 1").font(.system(size: 32, weight: .regular))
                     Spacer()
+//                    Button(action: {
+//                        self.bleManager1.startScanning()
+//                    }) {
+//                        Text("Start Scanning")
+//                    }
+//                    Button(action: {
+//                        self.bleManager1.stopScanning()
+//                    }) {
+//                        Text("Stop Scanning")
+//                    }
                     Button("Dispense"){
-                        print("hello")
-                        manager.writeOutgoingValue(data: "hello")
+                        print("test")
+                        self.bleManager1.writeOutgoingValue(data: "hello")
                         disable1 = true
                         disable2 = false
                     }
@@ -179,6 +194,6 @@ struct Dispensing_Queue: View {
 
 struct Dispensing_Queue_Previews: PreviewProvider {
     static var previews: some View {
-        Dispensing_Queue().environmentObject(Data())
+        Dispensing_Queue().environmentObject(Data()).environmentObject(BLEManager())
     }
 }

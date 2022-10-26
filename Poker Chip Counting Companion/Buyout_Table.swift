@@ -5,7 +5,10 @@
 //  Created by Adish Patil on 10/13/22.
 //
 
+import Foundation
+import UIKit
 import SwiftUI
+import CoreBluetooth
 
 struct Buyout_Table: View {
     
@@ -249,6 +252,6 @@ struct Buyout_Table: View {
 
 struct Buyout_Table_Previews: PreviewProvider {
     static var previews: some View {
-        Buyout_Table().environmentObject(Data())
+        Buyout_Table().environmentObject(Data()).environmentObject(BLEManager())
     }
 }

@@ -7,6 +7,7 @@
 import Foundation
 import UIKit
 import SwiftUI
+import CoreBluetooth
 
 class NumbersOnly: ObservableObject {
     @Published var value = "" {
@@ -593,9 +594,11 @@ struct DispensingInfo: View {
             }
             
             HStack{
-                Button("Submit", action: data.data_store)
-                    .padding(.all)
-                    .font(.title2)
+                Button("Submit"){
+                    data.data_store()
+                }
+                .padding(.all)
+                .font(.title2)
                 
                 NavigationLink("Begin Dispensing", destination: Dispensing_Queue())
                     .padding(.all)
@@ -611,7 +614,7 @@ struct DispensingInfo: View {
 
 struct DispensingInfo_Previews: PreviewProvider {
     static var previews: some View {
-        DispensingInfo().environmentObject(Data())
+        DispensingInfo().environmentObject(Data()).environmentObject(BLEManager())
     }
 }
 

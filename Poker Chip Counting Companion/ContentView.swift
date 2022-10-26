@@ -5,7 +5,9 @@
 //  Created by Adish Patil on 10/9/22.
 //
 import Foundation
+import UIKit
 import SwiftUI
+import CoreBluetooth
 
 struct ContentView: View {
     //button action variable
@@ -75,10 +77,10 @@ struct ContentView: View {
                                 .padding(.bottom)
                                 .fontWeight(.bold)
                             
-//                            NavigationLink("Bluetooth Connection", destination: BLE_View())
-//                                .padding(.all)
-//                                .font(.headline)
-//                                .fontWeight(.semibold)
+                            NavigationLink("Bluetooth Connection", destination: BLE_View())
+                                .padding(.all)
+                                .font(.headline)
+                                .fontWeight(.semibold)
                             
 //                            NavigationLink("Bluetooth Connection", destination: MainView())
 //                                .padding(.all)
@@ -102,6 +104,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environmentObject(Data())
+        ContentView().environmentObject(Data()).environmentObject(BLEManager())
     }
 }

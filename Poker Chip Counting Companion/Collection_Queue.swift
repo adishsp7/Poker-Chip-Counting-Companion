@@ -5,7 +5,10 @@
 //  Created by Adish Patil on 10/13/22.
 //
 
+import Foundation
+import UIKit
 import SwiftUI
+import CoreBluetooth
 
 struct Collection_Queue: View {
     
@@ -19,6 +22,9 @@ struct Collection_Queue: View {
     @State private var disable6: Bool = true
     @State private var disable7: Bool = true
     @State private var disable8: Bool = true
+    
+    @EnvironmentObject var bleManager1:BLEManager
+
     
     
     var body: some View {
@@ -36,6 +42,7 @@ struct Collection_Queue: View {
                     Spacer()
                     Button("Collect"){
                         print("hello")
+                        self.bleManager1.writeOutgoingValue(data: "hello")
                         disable1 = true
                         disable2 = false
                     }
@@ -174,6 +181,6 @@ struct Collection_Queue: View {
 
 struct Collection_Queue_Previews: PreviewProvider {
     static var previews: some View {
-        Collection_Queue().environmentObject(Data())
+        Collection_Queue().environmentObject(Data()).environmentObject(BLEManager())
     }
 }
