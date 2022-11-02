@@ -23,6 +23,7 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
     var myCentral: CBCentralManager!
     var discoveredPer: CBPeripheral?
     var transferCharacteristic: CBCharacteristic?
+    var readCharacteristic: CBCharacteristic?
     @Published var isSwitchedOn = false
     @Published var peripherals = [Peripheral]()
 
@@ -42,7 +43,7 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
     }
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         var peripheralName: String!
-        //print(peripheral)
+//        print(peripheral)
         
         if let name = advertisementData[CBAdvertisementDataLocalNameKey] as? String {
             peripheralName = name
@@ -57,7 +58,7 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
             peripherals.append(newPeripheral)
         }
         
-        if peripheralName == "ESP32-BLE-Server" {
+        if peripheralName == "Poker-Chip-Counting-Companion" {
             discoveredPer = peripheral
             
             print ("Connected")
@@ -96,8 +97,7 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
 
             if let peripheral = self.discoveredPer {
     
-              if let transferCharacteristic = transferCharacteristic {
-    
+              if let transferCharacteristic = transferCharacteristic {    
                 peripheral.writeValue(valueString!, for: transferCharacteristic, type: CBCharacteristicWriteType.withResponse)
                   }
               }
@@ -156,44 +156,59 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
         for characteristic in serviceCharacteristics where characteristic.uuid == CBUUIDs.BLECharacteristic_UUID {
             // If it is, subscribe to it
             transferCharacteristic = characteristic
+            readCharacteristic = characteristic
             peripheral.setNotifyValue(true, for: characteristic)
         }
 
         // Once this is complete, we just need to wait for the data to come in.
     }
-
-    /*
-     *   This callback lets us know more data has arrived via notification on the characteristic
-     */
+    
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        // Deal with errors (if any)
-        if let error = error {
-            print("Error discovering characteristics: %s", error.localizedDescription)
-//            cleanup()
-            return
-        }
 
-        guard let characteristicData = characteristic.value,
-            let stringFromData = String(data: characteristicData, encoding: .utf8) else { return }
+          var characteristicASCIIValue = NSString()
 
-        print("Received %d bytes: %s", characteristicData.count, stringFromData)
+          guard characteristic == readCharacteristic,
 
-//        // Have we received the end-of-message token?
-//        if stringFromData == "EOM" {
-//            // End-of-message case: show the data.
-//            // Dispatch the text view update to the main queue for updating the UI, because
-//            // we don't know which thread this method will be called back on.
-//            DispatchQueue.main.async() {
-//                self.textView.text = String(data: self.data, encoding: .utf8)
-//            }
-//
-//            // Write test data
-//            writeData()
-//        } else {
-//            // Otherwise, just append the data to what we have previously received.
-//            data.append(characteristicData)
-//        }
+          let characteristicValue = characteristic.value,
+          let ASCIIstring = NSString(data: characteristicValue, encoding: String.Encoding.utf8.rawValue) else { return }
+
+          characteristicASCIIValue = ASCIIstring
+
+          print("Value Recieved: \((characteristicASCIIValue as String))")
     }
+
+//    /*
+//     *   This callback lets us know more data has arrived via notification on the characteristic
+//     */
+//    func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
+//        // Deal with errors (if any)
+//        if let error = error {
+//            print("Error discovering characteristics: %s", error.localizedDescription)
+////            cleanup()
+//            return
+//        }
+//
+//        guard let characteristicData = characteristic.value,
+//            let stringFromData = String(data: characteristicData, encoding: .utf8) else { return }
+//
+//        print("Received %d bytes: %s", characteristicData.count, stringFromData)
+//
+////        // Have we received the end-of-message token?
+////        if stringFromData == "EOM" {
+////            // End-of-message case: show the data.
+////            // Dispatch the text view update to the main queue for updating the UI, because
+////            // we don't know which thread this method will be called back on.
+////            DispatchQueue.main.async() {
+////                self.textView.text = String(data: self.data, encoding: .utf8)
+////            }
+////
+////            // Write test data
+////            writeData()
+////        } else {
+////            // Otherwise, just append the data to what we have previously received.
+////            data.append(characteristicData)
+////        }
+//    }
 
     /*
      *  The peripheral letting us know whether our subscribe/unsubscribe happened or not

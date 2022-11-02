@@ -52,8 +52,7 @@ struct Dispensing_Queue: View {
 //                        Text("Stop Scanning")
 //                    }
                     Button("Dispense"){
-                        print("test")
-                        self.bleManager1.writeOutgoingValue(data: "hello")
+                        self.bleManager1.writeOutgoingValue(data: data.p1_dispense_chips)
                         disable1 = true
                         disable2 = false
                     }
@@ -69,7 +68,7 @@ struct Dispensing_Queue: View {
                     Text("Player 2").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Dispense"){
-                        print("hello")
+                        self.bleManager1.writeOutgoingValue(data: data.p2_dispense_chips)
                         disable2 = true
                         disable3 = false
                     }
@@ -86,7 +85,7 @@ struct Dispensing_Queue: View {
                     Text("Player 3").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Dispense"){
-                        print("hello")
+                        self.bleManager1.writeOutgoingValue(data: data.p3_dispense_chips)
                         disable3 = true
                         disable4 = false
                     }
@@ -103,7 +102,7 @@ struct Dispensing_Queue: View {
                     Text("Player 4").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Dispense"){
-                        print("hello")
+                        self.bleManager1.writeOutgoingValue(data: data.p4_dispense_chips)
                         disable4 = true
                         disable5 = false
                     }
@@ -120,7 +119,7 @@ struct Dispensing_Queue: View {
                     Text("Player 5").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Dispense"){
-                        print("hello")
+                        self.bleManager1.writeOutgoingValue(data: data.p5_dispense_chips)
                         disable5 = true
                         disable6 = false
                     }
@@ -137,7 +136,7 @@ struct Dispensing_Queue: View {
                     Text("Player 6").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Dispense"){
-                        print("hello")
+                        self.bleManager1.writeOutgoingValue(data: data.p6_dispense_chips)
                         disable6 = true
                         disable7 = false
                     }
@@ -154,7 +153,7 @@ struct Dispensing_Queue: View {
                     Text("Player 7").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Dispense"){
-                        print("hello")
+                        self.bleManager1.writeOutgoingValue(data: data.p7_dispense_chips)
                         disable7 = true
                         disable8 = false
                     }
@@ -171,7 +170,7 @@ struct Dispensing_Queue: View {
                     Text("Player 8").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Dispense"){
-                        print("hello")
+                        self.bleManager1.writeOutgoingValue(data: data.p8_dispense_chips)
                         disable8 = true
                     }
                     .font(.title)

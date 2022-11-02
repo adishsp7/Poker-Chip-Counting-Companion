@@ -41,8 +41,7 @@ struct Collection_Queue: View {
                     Text("Player 1").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Collect"){
-                        print("hello")
-                        self.bleManager1.writeOutgoingValue(data: "hello")
+                        self.bleManager1.writeOutgoingValue(data: "1")
                         disable1 = true
                         disable2 = false
                     }
@@ -58,7 +57,7 @@ struct Collection_Queue: View {
                     Text("Player 2").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Collect"){
-                        print("hello")
+                        self.bleManager1.writeOutgoingValue(data: "1")
                         disable2 = true
                         disable3 = false
                     }
@@ -75,7 +74,7 @@ struct Collection_Queue: View {
                     Text("Player 3").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Collect"){
-                        print("hello")
+                        self.bleManager1.writeOutgoingValue(data: "1")
                         disable3 = true
                         disable4 = false
                     }
@@ -92,7 +91,7 @@ struct Collection_Queue: View {
                     Text("Player 4").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Collect"){
-                        print("hello")
+                        self.bleManager1.writeOutgoingValue(data: "1")
                         disable4 = true
                         disable5 = false
                     }
@@ -109,7 +108,7 @@ struct Collection_Queue: View {
                     Text("Player 5").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Collect"){
-                        print("hello")
+                        self.bleManager1.writeOutgoingValue(data: "1")
                         disable5 = true
                         disable6 = false
                     }
@@ -126,7 +125,7 @@ struct Collection_Queue: View {
                     Text("Player 6").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Collect"){
-                        print("hello")
+                        self.bleManager1.writeOutgoingValue(data: "1")
                         disable6 = true
                         disable7 = false
                     }
@@ -143,7 +142,7 @@ struct Collection_Queue: View {
                     Text("Player 7").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Collect"){
-                        print("hello")
+                        self.bleManager1.writeOutgoingValue(data: "1")
                         disable7 = true
                         disable8 = false
                     }
@@ -160,7 +159,7 @@ struct Collection_Queue: View {
                     Text("Player 8").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Collect"){
-                        print("hello")
+                        self.bleManager1.writeOutgoingValue(data: "1")
                         disable8 = true
                     }
                     .font(.title)

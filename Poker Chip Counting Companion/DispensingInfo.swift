@@ -26,44 +26,11 @@ struct DispensingInfo: View {
     
     @EnvironmentObject var data:Data
     
-//    Numbers Only Approach
-//    @ObservedObject var red_value = NumbersOnly()
-//    @ObservedObject var white_value = NumbersOnly()
-//    @ObservedObject var green_value = NumbersOnly()
-//    @ObservedObject var blue_value = NumbersOnly()
-//    @ObservedObject var small_blind = NumbersOnly()
-//    @ObservedObject var big_blind = NumbersOnly()
-//    @ObservedObject var p1_buyin = NumbersOnly()
-//    @ObservedObject var p2_buyin = NumbersOnly()
-//    @ObservedObject var p3_buyin = NumbersOnly()
-//    @ObservedObject var p4_buyin = NumbersOnly()
-//    @ObservedObject var p5_buyin = NumbersOnly()
-//    @ObservedObject var p6_buyin = NumbersOnly()
-//    @ObservedObject var p7_buyin = NumbersOnly()
-//    @ObservedObject var p8_buyin = NumbersOnly()
-//    @State var red_value:String = ""
-//    @State var white_value:String = ""
-//    @State var green_value:String = ""
-//    @State var blue_value:String = ""
-//    @State var small_blind:String = ""
-//    @State var big_blind:String = ""
-//    @State var p1_buyin:String = ""
-//    @State var p2_buyin:String = ""
-//    @State var p3_buyin:String = ""
-//    @State var p4_buyin:String = ""
-//    @State var p5_buyin:String = ""
-//    @State var p6_buyin:String = ""
-//    @State var p7_buyin:String = ""
-//    @State var p8_buyin:String = ""
-    
-
-    
     var body: some View {
 
         ScrollView{
             
             VStack{
-                
                 
                 //Please enter the all the g...
                 Text("Please enter the all the game information below to be given the correct amount of chips for your Poker Game and press submit before dispensing...").font(.system(size: 20, weight: .regular)).multilineTextAlignment(.center).padding(.bottom, -12.0)
