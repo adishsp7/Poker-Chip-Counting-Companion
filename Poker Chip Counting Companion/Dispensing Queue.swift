@@ -183,8 +183,21 @@ struct Dispensing_Queue: View {
                 NavigationLink("Finish Dispensing", destination: Buyin_Table())
                                     .padding(.all)
                                     .font(.largeTitle)
+                                    .padding(.bottom, 10.0)
                 
               
+            }
+            HStack{
+                Button(action: {
+                    self.bleManager1.startScanning()
+                }) {
+                    Text("Start Scanning")
+                }
+                Button(action: {
+                    self.bleManager1.stopScanning()
+                }) {
+                    Text("Stop Scanning")
+                }
             }
             Spacer()
         }

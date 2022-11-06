@@ -128,7 +128,7 @@ class Data: ObservableObject {
 
         p3_buyin_int = Double(p3_buyin) ?? 0
         (p3_red_chips, p3_white_chips, p3_green_chips, p3_blue_chips) = chip_calc(buyin: p3_buyin_int)
-        p2_dispense_chips = ascii_string_conv(red:p3_red_chips, white:p3_white_chips, green:p3_green_chips, blue:p3_blue_chips)
+        p3_dispense_chips = ascii_string_conv(red:p3_red_chips, white:p3_white_chips, green:p3_green_chips, blue:p3_blue_chips)
 
         p4_buyin_int = Double(p4_buyin) ?? 0
         (p4_red_chips, p4_white_chips, p4_green_chips, p4_blue_chips) = chip_calc(buyin: p4_buyin_int)

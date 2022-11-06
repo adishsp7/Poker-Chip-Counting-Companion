@@ -18,14 +18,15 @@ struct Peripheral: Identifiable {
     let name: String
     let rssi: Int
 }
-class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeripheralDelegate {
+class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeripheralDelegate, CBPeripheralManagerDelegate {
 
     var myCentral: CBCentralManager!
     var discoveredPer: CBPeripheral?
-    var transferCharacteristic: CBCharacteristic?
-    var readCharacteristic: CBCharacteristic?
+    private var transferCharacteristic: CBCharacteristic?
+    private var readCharacteristic: CBCharacteristic?
     @Published var isSwitchedOn = false
     @Published var peripherals = [Peripheral]()
+    var buy_outs = [Int?]()
 
         override init() {
             super.init()
@@ -139,6 +140,26 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
         }
     }
 
+    func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
+       switch peripheral.state {
+       case .poweredOn:
+           print("Peripheral Is Powered On.")
+       case .unsupported:
+           print("Peripheral Is Unsupported.")
+       case .unauthorized:
+       print("Peripheral Is Unauthorized.")
+       case .unknown:
+           print("Peripheral Unknown")
+       case .resetting:
+           print("Peripheral Resetting")
+       case .poweredOff:
+         print("Peripheral Is Powered Off.")
+       @unknown default:
+         print("Error")
+       }
+     }
+    
+    
     /*
      *  The Transfer characteristic was discovered.
      *  Once this has been found, we want to subscribe to it, which lets the peripheral know we want the data it contains
@@ -158,6 +179,9 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
             transferCharacteristic = characteristic
             readCharacteristic = characteristic
             peripheral.setNotifyValue(true, for: characteristic)
+//            peripheral.readValue(for: characteristic)
+            
+//            print("Characteristic Read: \(readCharacteristic?.uuid)")
         }
 
         // Once this is complete, we just need to wait for the data to come in.
@@ -165,16 +189,32 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
 
-          var characteristicASCIIValue = NSString()
+        peripheral.readValue(for: characteristic)
+        print(characteristic.value![0],characteristic.value![1],characteristic.value![2],characteristic.value![3])
+        
+        buy_outs.append(Int(exactly: characteristic.value![0]))
+        buy_outs.append(Int(exactly: characteristic.value![1]))
+        buy_outs.append(Int(exactly: characteristic.value![2]))
+        buy_outs.append(Int(exactly: characteristic.value![3]))
+        print(buy_outs)
 
-          guard characteristic == readCharacteristic,
+        print("didUpdateValueFor")
+//          var characteristicASCIIValue = NSString()
+//
+//          guard characteristic == readCharacteristic,
+//
+//          let characteristicValue = characteristic.value,
+//                let ASCIIstring = NSString(data: characteristicValue, encoding: String.Encoding.utf8.rawValue) else { return }
+//
+//            characteristicASCIIValue = ASCIIstring
+//
+//
+//            print(characteristicASCIIValue as String)
 
-          let characteristicValue = characteristic.value,
-          let ASCIIstring = NSString(data: characteristicValue, encoding: String.Encoding.utf8.rawValue) else { return }
+          //characteristicASCIIValue = ASCIIstring
+            
 
-          characteristicASCIIValue = ASCIIstring
-
-          print("Value Recieved: \((characteristicASCIIValue as String))")
+//          print("Value Recieved: \((characteristicASCIIValue as String))")
     }
 
 //    /*
@@ -213,26 +253,26 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
     /*
      *  The peripheral letting us know whether our subscribe/unsubscribe happened or not
      */
-//    func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {
-//        // Deal with errors (if any)
-//        if let error = error {
-//            print("Error changing notification state: %s", error.localizedDescription)
-//            return
-//        }
-//
-//        // Exit if it's not the transfer characteristic
-//        guard characteristic.uuid == CBUUIDs.BLECharacteristic_UUID else { return }
-//
-//        if characteristic.isNotifying {
-//            // Notification has started
-//            print("Notification began on %@", characteristic)
-//        } else {
-//            // Notification has stopped, so disconnect from the peripheral
-//            print("Notification stopped on %@. Disconnecting", characteristic)
-////            cleanup()
-//        }
-//
-//    }
+    func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {
+        // Deal with errors (if any)
+        if let error = error {
+            print("Error changing notification state: %s", error.localizedDescription)
+            return
+        }
+
+        // Exit if it's not the transfer characteristic
+        guard characteristic.uuid == CBUUIDs.BLECharacteristic_UUID else { return }
+
+        if characteristic.isNotifying {
+            // Notification has started
+            print("Notification began on %@", characteristic)
+        } else {
+            // Notification has stopped, so disconnect from the peripheral
+            print("Notification stopped on %@. Disconnecting", characteristic)
+//            cleanup()
+        }
+
+    }
 
 //    /*
 //     *  This is called when peripheral is ready to accept more data when using write without response
