@@ -22,6 +22,7 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
 
     var myCentral: CBCentralManager!
     var discoveredPer: CBPeripheral?
+//    private var per: CBPeripheral?
     private var transferCharacteristic: CBCharacteristic?
     private var readCharacteristic: CBCharacteristic?
     @Published var isSwitchedOn = false
@@ -102,6 +103,18 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
                 peripheral.writeValue(valueString!, for: transferCharacteristic, type: CBCharacteristicWriteType.withResponse)
                   }
               }
+    }
+    
+    /*
+     *  Start reading for test data from the peripheral
+     */
+    func readValue(){
+        if let peripheral = self.discoveredPer {
+
+          if let readCharacteristic = readCharacteristic {
+            peripheral.readValue(for: readCharacteristic)
+              }
+          }
     }
     
     
@@ -187,10 +200,10 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
         // Once this is complete, we just need to wait for the data to come in.
     }
     
+    
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
 
-        peripheral.readValue(for: characteristic)
-        print(characteristic.value![0],characteristic.value![1],characteristic.value![2],characteristic.value![3])
+//        print(characteristic.value![0],characteristic.value![1],characteristic.value![2],characteristic.value![3])
         
         buy_outs.append(Int(exactly: characteristic.value![0]))
         buy_outs.append(Int(exactly: characteristic.value![1]))

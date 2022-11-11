@@ -41,16 +41,7 @@ struct Dispensing_Queue: View {
                     Spacer()
                     Text("Player 1").font(.system(size: 32, weight: .regular))
                     Spacer()
-//                    Button(action: {
-//                        self.bleManager1.startScanning()
-//                    }) {
-//                        Text("Start Scanning")
-//                    }
-//                    Button(action: {
-//                        self.bleManager1.stopScanning()
-//                    }) {
-//                        Text("Stop Scanning")
-//                    }
+
                     Button("Dispense"){
                         self.bleManager1.writeOutgoingValue(data: data.p1_dispense_chips)
                         disable1 = true

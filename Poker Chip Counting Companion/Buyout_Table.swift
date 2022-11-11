@@ -13,6 +13,7 @@ import CoreBluetooth
 struct Buyout_Table: View {
     
     @EnvironmentObject var data:Data
+    @EnvironmentObject var bleManager1:BLEManager
 
     var body: some View {
         NavigationStack{
@@ -20,8 +21,8 @@ struct Buyout_Table: View {
             VStack{
                 
                 //Chip Dispense
-                Text("Player Buy-Out Info ($)").font(.system(size: 34, weight: .bold)).underline().foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 1))).padding(.vertical, 20.0)
-
+                Text("Player Buy-Out Info ($)").font(.system(size: 34, weight: .bold)).underline().foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 1))).padding(.vertical, 10.0)
+    
                                 
                                 VStack(spacing: 6) {
                                     Text("Player 1").font(.custom("Inter Medium", size: 20)).foregroundColor(Color(.black))
@@ -38,7 +39,7 @@ struct Buyout_Table: View {
                                         .frame(maxWidth: 331)
                                         HStack(spacing: 0) {
                                             
-                                            Text(data.p1_buyin)
+                                            Text(data.p1_buyout!)
                                                 .font(.title)
                                                 .foregroundColor(.red)
                                             
@@ -65,7 +66,7 @@ struct Buyout_Table: View {
                                         .frame(maxWidth: 331)
                                         HStack(spacing: 0) {
                                             
-                                            Text(data.p2_buyin)
+                                            Text(data.p2_buyout!)
                                                 .font(.title)
                                                 .foregroundColor(.red)
                                             
@@ -92,7 +93,7 @@ struct Buyout_Table: View {
                                         .frame(maxWidth: 331)
                                         HStack(spacing: 0) {
                                             
-                                            Text(data.p3_buyin)
+                                            Text(data.p3_buyout!)
                                                 .font(.title)
                                                 .foregroundColor(.red)
                                             
@@ -120,7 +121,7 @@ struct Buyout_Table: View {
                                         .frame(maxWidth: 331)
                                         HStack(spacing: 0) {
                                             
-                                            Text(data.p4_buyin)
+                                            Text(data.p4_buyout!)
                                                 .font(.title)
                                                 .foregroundColor(.red)
                                             
@@ -147,7 +148,7 @@ struct Buyout_Table: View {
                                         .frame(maxWidth: 331)
                                         HStack(spacing: 0) {
                                             
-                                            Text(data.p5_buyin)
+                                            Text(data.p5_buyout!)
                                                 .font(.title)
                                                 .foregroundColor(.red)
                                             
@@ -174,7 +175,7 @@ struct Buyout_Table: View {
                                         .frame(maxWidth: 331)
                                         HStack(spacing: 0) {
                                             
-                                            Text(data.p6_buyin)
+                                            Text(data.p6_buyout!)
                                                 .font(.title)
                                                 .foregroundColor(.red)
                                             
@@ -201,7 +202,7 @@ struct Buyout_Table: View {
                                         .frame(maxWidth: 331)
                                         HStack(spacing: 0) {
                                             
-                                            Text(data.p7_buyin)
+                                            Text(data.p7_buyout!)
                                                 .font(.title)
                                                 .foregroundColor(.red)
                                             
@@ -229,7 +230,7 @@ struct Buyout_Table: View {
                                         .frame(maxWidth: 331)
                                         HStack(spacing: 0) {
                                             
-                                            Text(data.p8_buyin)
+                                            Text(data.p8_buyout!)
                                                 .font(.title)
                                                 .foregroundColor(.red)
                                             
@@ -241,6 +242,9 @@ struct Buyout_Table: View {
                                 }
                                 .padding(.bottom, -10.0)
                 
+            }
+            
+            VStack{
                 NavigationLink("Reset/Exit", destination: ContentView())
                     .padding(.all)
                     .font(.largeTitle)

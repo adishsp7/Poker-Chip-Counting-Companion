@@ -24,6 +24,7 @@ struct Collection_Queue: View {
     @State private var disable8: Bool = true
     
     @EnvironmentObject var bleManager1:BLEManager
+    @EnvironmentObject var data:Data
 
     
     
@@ -42,6 +43,7 @@ struct Collection_Queue: View {
                     Spacer()
                     Button("Collect"){
                         self.bleManager1.writeOutgoingValue(data: "1000000000")
+                        self.bleManager1.readValue()
                         disable1 = true
                         disable2 = false
                     }
@@ -58,6 +60,7 @@ struct Collection_Queue: View {
                     Spacer()
                     Button("Collect"){
                         self.bleManager1.writeOutgoingValue(data: "1000000000")
+                        self.bleManager1.readValue()
                         disable2 = true
                         disable3 = false
                     }
@@ -75,6 +78,7 @@ struct Collection_Queue: View {
                     Spacer()
                     Button("Collect"){
                         self.bleManager1.writeOutgoingValue(data: "1000000000")
+                        self.bleManager1.readValue()
                         disable3 = true
                         disable4 = false
                     }
@@ -92,6 +96,7 @@ struct Collection_Queue: View {
                     Spacer()
                     Button("Collect"){
                         self.bleManager1.writeOutgoingValue(data: "1000000000")
+                        self.bleManager1.readValue()
                         disable4 = true
                         disable5 = false
                     }
@@ -109,6 +114,7 @@ struct Collection_Queue: View {
                     Spacer()
                     Button("Collect"){
                         self.bleManager1.writeOutgoingValue(data: "1000000000")
+                        self.bleManager1.readValue()
                         disable5 = true
                         disable6 = false
                     }
@@ -126,6 +132,7 @@ struct Collection_Queue: View {
                     Spacer()
                     Button("Collect"){
                         self.bleManager1.writeOutgoingValue(data: "1000000000")
+                        self.bleManager1.readValue()
                         disable6 = true
                         disable7 = false
                     }
@@ -143,6 +150,7 @@ struct Collection_Queue: View {
                     Spacer()
                     Button("Collect"){
                         self.bleManager1.writeOutgoingValue(data: "1000000000")
+                        self.bleManager1.readValue()
                         disable7 = true
                         disable8 = false
                     }
@@ -160,6 +168,7 @@ struct Collection_Queue: View {
                     Spacer()
                     Button("Collect"){
                         self.bleManager1.writeOutgoingValue(data: "1000000000")
+                        self.bleManager1.readValue()
                         disable8 = true
                     }
                     .font(.title)
@@ -167,25 +176,40 @@ struct Collection_Queue: View {
                     .disabled(disable8)
                     Spacer()
                 }
-                .padding(.bottom, 20.0)
+                .padding(.bottom, 10.0)
                 
                 NavigationLink("Finish Collecting", destination: Buyout_Table())
                     .padding(.all)
                     .font(.largeTitle)
-                    .padding(.bottom, 10.0)
+                    .padding(.bottom, 5.0)
             }
-            HStack{
-                Button(action: {
-                    self.bleManager1.startScanning()
-                }) {
-                    Text("Start Scanning")
-                }
-                Button(action: {
-                    self.bleManager1.stopScanning()
-                }) {
-                    Text("Stop Scanning")
-                }
+            
+            Button("Calculate Buyouts"){
+                data.p1_buyout_calc(red: self.bleManager1.buy_outs[0]!, white: self.bleManager1.buy_outs[1]!, green: self.bleManager1.buy_outs[2]!, blue: self.bleManager1.buy_outs[3]!)
+                data.p2_buyout_calc(red: self.bleManager1.buy_outs[4]!, white: self.bleManager1.buy_outs[5]!, green: self.bleManager1.buy_outs[6]!, blue: self.bleManager1.buy_outs[7]!)
+                data.p3_buyout_calc(red: self.bleManager1.buy_outs[8]!, white: self.bleManager1.buy_outs[9]!, green: self.bleManager1.buy_outs[10]!, blue: self.bleManager1.buy_outs[11]!)
+                data.p4_buyout_calc(red: self.bleManager1.buy_outs[12]!, white: self.bleManager1.buy_outs[13]!, green: self.bleManager1.buy_outs[14]!, blue: self.bleManager1.buy_outs[15]!)
+                data.p5_buyout_calc(red: self.bleManager1.buy_outs[16]!, white: self.bleManager1.buy_outs[17]!, green: self.bleManager1.buy_outs[18]!, blue: self.bleManager1.buy_outs[19]!)
+                data.p6_buyout_calc(red: self.bleManager1.buy_outs[20]!, white: self.bleManager1.buy_outs[21]!, green: self.bleManager1.buy_outs[22]!, blue: self.bleManager1.buy_outs[23]!)
+                data.p7_buyout_calc(red: self.bleManager1.buy_outs[24]!, white: self.bleManager1.buy_outs[25]!, green: self.bleManager1.buy_outs[26]!, blue: self.bleManager1.buy_outs[27]!)
+                data.p8_buyout_calc(red: self.bleManager1.buy_outs[28]!, white: self.bleManager1.buy_outs[29]!, green: self.bleManager1.buy_outs[30]!, blue: self.bleManager1.buy_outs[31]!)
             }
+            .font(.title)
+            .foregroundColor(.green)
+            .padding(.vertical, 10.0)
+            
+//            HStack{
+//                Button(action: {
+//                    self.bleManager1.startScanning()
+//                }) {
+//                    Text("Start Scanning")
+//                }
+//                Button(action: {
+//                    self.bleManager1.stopScanning()
+//                }) {
+//                    Text("Stop Scanning")
+//                }
+//            }
             Spacer()
         }
     }

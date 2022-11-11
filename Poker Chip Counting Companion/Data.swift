@@ -93,6 +93,15 @@ class Data: ObservableObject {
     var p8_white_chips:Int = 0
     var p8_dispense_chips:String = ""
     
+    var p1_buyout:String? = ""
+    var p2_buyout:String? = ""
+    var p3_buyout:String? = ""
+    var p4_buyout:String? = ""
+    var p5_buyout:String? = ""
+    var p6_buyout:String? = ""
+    var p7_buyout:String? = ""
+    var p8_buyout:String? = ""
+    
     func data_store(){
         
         //store values in static ints
@@ -268,6 +277,48 @@ class Data: ObservableObject {
 //        let newString = String(unicodeScalarView)
 //        print(newString) // prints: foo
     
+    }
+    
+    func p1_buyout_calc(red: Int, white: Int, green: Int, blue: Int){
+        p1_buyout = buyout_calc(red_chips: red, white_chips: white, green_chips: green, blue_chips: blue)
+    }
+    
+    func p2_buyout_calc(red: Int, white: Int, green: Int, blue: Int){
+        p2_buyout = buyout_calc(red_chips: red, white_chips: white, green_chips: green, blue_chips: blue)
+    }
+    
+    func p3_buyout_calc(red: Int, white: Int, green: Int, blue: Int){
+        p3_buyout = buyout_calc(red_chips: red, white_chips: white, green_chips: green, blue_chips: blue)
+    }
+    
+    func p4_buyout_calc(red: Int, white: Int, green: Int, blue: Int){
+        p4_buyout = buyout_calc(red_chips: red, white_chips: white, green_chips: green, blue_chips: blue)
+    }
+    
+    func p5_buyout_calc(red: Int, white: Int, green: Int, blue: Int){
+        p5_buyout = buyout_calc(red_chips: red, white_chips: white, green_chips: green, blue_chips: blue)
+    }
+    
+    func p6_buyout_calc(red: Int, white: Int, green: Int, blue: Int){
+        p6_buyout = buyout_calc(red_chips: red, white_chips: white, green_chips: green, blue_chips: blue)
+    }
+    
+    func p7_buyout_calc(red: Int, white: Int, green: Int, blue: Int){
+        p7_buyout = buyout_calc(red_chips: red, white_chips: white, green_chips: green, blue_chips: blue)
+    }
+    
+    func p8_buyout_calc(red: Int, white: Int, green: Int, blue: Int){
+        p8_buyout = buyout_calc(red_chips: red, white_chips: white, green_chips: green, blue_chips: blue)
+    }
+    
+    func buyout_calc(red_chips: Int, white_chips: Int, green_chips: Int, blue_chips:Int) -> String{
+        print ("total buy out calculation")
+        var total_buyout: Int
+        
+        total_buyout = (red_chips * Int(red_value_int)) + (white_chips * Int(white_value_int)) + (green_chips * Int(green_value_int)) + (blue_chips * Int(blue_value_int))
+        
+        print(total_buyout)
+        return String(total_buyout)
     }
     
 }
