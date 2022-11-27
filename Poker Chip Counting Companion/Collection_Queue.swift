@@ -32,9 +32,12 @@ struct Collection_Queue: View {
         NavigationStack{
             
             VStack{
-                
                 //Chip Dispense
                 Text("Chip Collection").font(.system(size: 35, weight: .bold)).underline().foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 1))).padding(.vertical, 40.0)
+            }
+            
+            
+            VStack{
 
                 HStack{
                     //Player_1
@@ -42,8 +45,14 @@ struct Collection_Queue: View {
                     Text("Player 1").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Collect"){
-                        self.bleManager1.writeOutgoingValue(data: "1000000000")
-                        self.bleManager1.readValue()
+                        if(data.p1_buyin_int != 0){
+                            self.bleManager1.writeOutgoingValue(data: "200000000")
+                            self.bleManager1.readValue()
+                        }
+                        else{
+                            self.bleManager1.buyout_zero()
+                        }
+                        
                         disable1 = true
                         disable2 = false
                     }
@@ -59,8 +68,14 @@ struct Collection_Queue: View {
                     Text("Player 2").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Collect"){
-                        self.bleManager1.writeOutgoingValue(data: "1000000000")
-                        self.bleManager1.readValue()
+                        if(data.p2_buyin_int != 0){
+                            self.bleManager1.writeOutgoingValue(data: "200000000")
+                            self.bleManager1.readValue()
+                        }
+                        else{
+                            self.bleManager1.buyout_zero()
+                        }
+                        
                         disable2 = true
                         disable3 = false
                     }
@@ -77,8 +92,13 @@ struct Collection_Queue: View {
                     Text("Player 3").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Collect"){
-                        self.bleManager1.writeOutgoingValue(data: "1000000000")
-                        self.bleManager1.readValue()
+                        if(data.p3_buyin_int != 0){
+                            self.bleManager1.writeOutgoingValue(data: "200000000")
+                            self.bleManager1.readValue()
+                        }
+                        else{
+                            self.bleManager1.buyout_zero()
+                        }
                         disable3 = true
                         disable4 = false
                     }
@@ -95,8 +115,13 @@ struct Collection_Queue: View {
                     Text("Player 4").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Collect"){
-                        self.bleManager1.writeOutgoingValue(data: "1000000000")
-                        self.bleManager1.readValue()
+                        if(data.p4_buyin_int != 0){
+                            self.bleManager1.writeOutgoingValue(data: "200000000")
+                            self.bleManager1.readValue()
+                        }
+                        else{
+                            self.bleManager1.buyout_zero()
+                        }
                         disable4 = true
                         disable5 = false
                     }
@@ -113,8 +138,13 @@ struct Collection_Queue: View {
                     Text("Player 5").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Collect"){
-                        self.bleManager1.writeOutgoingValue(data: "1000000000")
-                        self.bleManager1.readValue()
+                        if(data.p5_buyin_int != 0){
+                            self.bleManager1.writeOutgoingValue(data: "200000000")
+                            self.bleManager1.readValue()
+                        }
+                        else{
+                            self.bleManager1.buyout_zero()
+                        }
                         disable5 = true
                         disable6 = false
                     }
@@ -131,8 +161,13 @@ struct Collection_Queue: View {
                     Text("Player 6").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Collect"){
-                        self.bleManager1.writeOutgoingValue(data: "1000000000")
-                        self.bleManager1.readValue()
+                        if(data.p6_buyin_int != 0){
+                            self.bleManager1.writeOutgoingValue(data: "200000000")
+                            self.bleManager1.readValue()
+                        }
+                        else{
+                            self.bleManager1.buyout_zero()
+                        }
                         disable6 = true
                         disable7 = false
                     }
@@ -149,8 +184,13 @@ struct Collection_Queue: View {
                     Text("Player 7").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Collect"){
-                        self.bleManager1.writeOutgoingValue(data: "1000000000")
-                        self.bleManager1.readValue()
+                        if(data.p7_buyin_int != 0){
+                            self.bleManager1.writeOutgoingValue(data: "200000000")
+                            self.bleManager1.readValue()
+                        }
+                        else{
+                            self.bleManager1.buyout_zero()
+                        }
                         disable7 = true
                         disable8 = false
                     }
@@ -167,8 +207,13 @@ struct Collection_Queue: View {
                     Text("Player 8").font(.system(size: 32, weight: .regular))
                     Spacer()
                     Button("Collect"){
-                        self.bleManager1.writeOutgoingValue(data: "1000000000")
-                        self.bleManager1.readValue()
+                        if(data.p8_buyin_int != 0){
+                            self.bleManager1.writeOutgoingValue(data: "200000000")
+                            self.bleManager1.readValue()
+                        }
+                        else{
+                            self.bleManager1.buyout_zero()
+                        }
                         disable8 = true
                     }
                     .font(.title)
@@ -181,7 +226,7 @@ struct Collection_Queue: View {
                 NavigationLink("Finish Collecting", destination: Buyout_Table())
                     .padding(.all)
                     .font(.largeTitle)
-                    .padding(.bottom, 5.0)
+                    .padding(.bottom, -5.0)
             }
             
             Button("Calculate Buyouts"){

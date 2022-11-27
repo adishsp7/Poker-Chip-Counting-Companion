@@ -14,6 +14,7 @@ struct Buyin_Table: View {
     
 //    @Binding var p1_buyin:Int = DispensingInfo.$p1_buyin
     @EnvironmentObject var data:Data
+    @EnvironmentObject var bleManager1:BLEManager
     
 //        @State var p1_buyin:String = ""
 //        @State var p2_buyin:String = ""
@@ -342,11 +343,21 @@ struct Buyin_Table: View {
                     }
                     .frame(maxWidth: 331)
                 }
-                .padding(.bottom, -10.0)
+                .padding(.bottom, 5.0)
 //                Button("Collect")
+            }
+            
+            HStack{
+                Button("Prepare Collection"){
+                    self.bleManager1.writeOutgoingValue(data: "100000000")
+                }
+                .font(.title2)
+                .foregroundColor(.green)
+//                .padding(.bottom, -5.0)
+                
                 NavigationLink("Start Collection", destination: Collection_Queue())
                     .padding(.all)
-                    .font(.largeTitle)
+                    .font(.title2)
             }
             Spacer()
         }

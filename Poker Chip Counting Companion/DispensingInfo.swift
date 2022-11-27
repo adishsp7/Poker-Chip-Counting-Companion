@@ -33,7 +33,7 @@ struct DispensingInfo: View {
             VStack{
                 
                 //Please enter the all the g...
-                Text("Please enter the all the game information below to be given the correct amount of chips for your Poker Game and press submit before dispensing...").font(.system(size: 20, weight: .regular)).multilineTextAlignment(.center).padding(.bottom, -12.0)
+                Text("Please enter the all the game information below to be given the correct amount of chips for your Poker Game and press submit before dispensing...").font(.system(size: 20, weight: .regular)).multilineTextAlignment(.center).padding(.bottom, -12.0).padding(.top, 10)
                 
                 //Rectangle 1
                 ZStack {
@@ -45,7 +45,7 @@ struct DispensingInfo: View {
                         HStack{
                             //form/03 component/textFiel...
                             VStack(spacing: 6) {
-                                Text(" Red Chips").font(.system(size: 16, weight: .medium))
+                                Text("Red Chips").font(.system(size: 16, weight: .medium))
                                     .frame(maxWidth: 139)
                                 ZStack() {
                                     ZStack {
@@ -81,7 +81,7 @@ struct DispensingInfo: View {
                             
                             //form/03 component/textFiel...
                             VStack(spacing: 6) {
-                                Text(" White Chips").font(.system(size: 16, weight: .medium))
+                                Text("White Chips").font(.system(size: 16, weight: .medium))
                                     .frame(maxWidth: 139)
                                 ZStack() {
                                     ZStack {
@@ -116,7 +116,7 @@ struct DispensingInfo: View {
                         HStack {
                             //form/03 component/textFiel...
                             VStack(spacing: 6) {
-                                Text(" Green Chips").font(.system(size: 16, weight: .medium))
+                                Text("Black Chips").font(.system(size: 16, weight: .medium))
                                     .frame(maxWidth: 139)
                                 ZStack() {
                                     ZStack {
@@ -145,13 +145,13 @@ struct DispensingInfo: View {
                                 }
                                 .frame(maxWidth: 139)
                             }
-                            .background(Color(#colorLiteral(red: 0.1882352977991104, green: 0.8588235378265381, blue: 0.35686275362968445, alpha: 1)))
+                            .background(Color(#colorLiteral(red: 0.7208333611488342, green: 0.7208333611488342, blue: 0.7208333611488342, alpha: 1)))
                             .overlay(Rectangle().strokeBorder(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), lineWidth: 1))
                             .padding()
                             
                             //form/03 component/textFiel...
                             VStack(spacing: 6) {
-                                Text(" Blue Chips").font(.system(size: 16, weight: .medium))
+                                Text("Blue Chips").font(.system(size: 16, weight: .medium))
                                     .frame(maxWidth: 139)
                                 ZStack() {
                                     ZStack {
@@ -190,105 +190,105 @@ struct DispensingInfo: View {
                     
                 }
                 .frame(width: 367, height: 284)
-                .padding()
+                .padding(.bottom, -5)
                 
-                //Rectangle 1
-                ZStack {
-                    //                Rectangle()
-                    //                .fill(Color(#colorLiteral(red: 0.9666666388511658, green: 0.9626388549804688, blue: 0.9626388549804688, alpha: 1)))
-                    //
-                    //                Rectangle()
-                    //                .strokeBorder(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), lineWidth: 1)
-                    
-                    VStack {
-                        
-                        //Blinds ($)
-                        Text("Blinds ($)").font(.system(size: 36, weight: .bold)).underline().foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 1))).padding(.bottom, -4.0)
-                        
-                        HStack{
-                            //form/03 component/textFiel...
-                            VStack(spacing: 4) {
-                                Text("Small Blind").font(.system(size: 16, weight: .medium))
-                                    .frame(maxWidth: 139)
-                                ZStack() {
-                                    ZStack {
-                                        RoundedRectangle(cornerRadius: 2)
-                                            .fill(Color(#colorLiteral(red: 0.9882352948188782, green: 0.9882352948188782, blue: 0.9921568632125854, alpha: 1)))
-                                        
-                                        RoundedRectangle(cornerRadius: 2)
-                                            .strokeBorder(Color(#colorLiteral(red: 0.8117647171020508, green: 0.8156862854957581, blue: 0.843137264251709, alpha: 1)), lineWidth: 1)
-                                    }
-                                    .frame(width: 139, height: 42)
-                                    .frame(maxWidth: 139)
-                                    HStack(spacing: 0) {
-//                                        Text("Eg. 10").font(.custom("Inter Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 0.3)))
-//                                        TextField("Eg.10", text: $small_blind.value)
+//                //Rectangle 1
+//                ZStack {
+//                    //                Rectangle()
+//                    //                .fill(Color(#colorLiteral(red: 0.9666666388511658, green: 0.9626388549804688, blue: 0.9626388549804688, alpha: 1)))
+//                    //
+//                    //                Rectangle()
+//                    //                .strokeBorder(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), lineWidth: 1)
+//
+//                    VStack {
+//
+//                        //Blinds ($)
+//                        Text("Blinds ($)").font(.system(size: 36, weight: .bold)).underline().foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 1))).padding(.bottom, -4.0)
+//
+//                        HStack{
+//                            //form/03 component/textFiel...
+//                            VStack(spacing: 4) {
+//                                Text("Small Blind").font(.system(size: 16, weight: .medium))
+//                                    .frame(maxWidth: 139)
+//                                ZStack() {
+//                                    ZStack {
+//                                        RoundedRectangle(cornerRadius: 2)
+//                                            .fill(Color(#colorLiteral(red: 0.9882352948188782, green: 0.9882352948188782, blue: 0.9921568632125854, alpha: 1)))
+//
+//                                        RoundedRectangle(cornerRadius: 2)
+//                                            .strokeBorder(Color(#colorLiteral(red: 0.8117647171020508, green: 0.8156862854957581, blue: 0.843137264251709, alpha: 1)), lineWidth: 1)
+//                                    }
+//                                    .frame(width: 139, height: 42)
+//                                    .frame(maxWidth: 139)
+//                                    HStack(spacing: 0) {
+////                                        Text("Eg. 10").font(.custom("Inter Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 0.3)))
+////                                        TextField("Eg.10", text: $small_blind.value)
+////                                            .multilineTextAlignment(.center)
+////                                            .padding()
+////                                            .keyboardType(.decimalPad)
+//
+//                                        TextField("Eg.10", text: $data.small_blind)
 //                                            .multilineTextAlignment(.center)
 //                                            .padding()
 //                                            .keyboardType(.decimalPad)
-                                        
-                                        TextField("Eg.10", text: $data.small_blind)
-                                            .multilineTextAlignment(.center)
-                                            .padding()
-                                            .keyboardType(.decimalPad)
-                                        
-                                    }
-                                    .frame(maxWidth: 139)
-                                }
-                                .frame(maxWidth: 139)
-                            }
-                            .background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                            .overlay(Rectangle().strokeBorder(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), lineWidth: 1))
-                            .padding()
-                            
-                            //form/03 component/textFiel...
-                            VStack(spacing: 4) {
-                                Text("Big Blind").font(.system(size: 16, weight: .medium))
-                                    .frame(maxWidth: 139)
-                                ZStack() {
-                                    ZStack {
-                                        RoundedRectangle(cornerRadius: 2)
-                                            .fill(Color(#colorLiteral(red: 0.9882352948188782, green: 0.9882352948188782, blue: 0.9921568632125854, alpha: 1)))
-                                        
-                                        RoundedRectangle(cornerRadius: 2)
-                                            .strokeBorder(Color(#colorLiteral(red: 0.8117647171020508, green: 0.8156862854957581, blue: 0.843137264251709, alpha: 1)), lineWidth: 1)
-                                    }
-                                    .frame(width: 139, height: 42)
-                                    .frame(maxWidth: 139)
-                                    HStack(spacing: 0) {
-//                                        Text("Eg. 20").font(.custom("Inter Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 0.3)))
-//                                        TextField("Eg.20", text: $big_blind.value)
+//
+//                                    }
+//                                    .frame(maxWidth: 139)
+//                                }
+//                                .frame(maxWidth: 139)
+//                            }
+//                            .background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+//                            .overlay(Rectangle().strokeBorder(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), lineWidth: 1))
+//                            .padding()
+//
+//                            //form/03 component/textFiel...
+//                            VStack(spacing: 4) {
+//                                Text("Big Blind").font(.system(size: 16, weight: .medium))
+//                                    .frame(maxWidth: 139)
+//                                ZStack() {
+//                                    ZStack {
+//                                        RoundedRectangle(cornerRadius: 2)
+//                                            .fill(Color(#colorLiteral(red: 0.9882352948188782, green: 0.9882352948188782, blue: 0.9921568632125854, alpha: 1)))
+//
+//                                        RoundedRectangle(cornerRadius: 2)
+//                                            .strokeBorder(Color(#colorLiteral(red: 0.8117647171020508, green: 0.8156862854957581, blue: 0.843137264251709, alpha: 1)), lineWidth: 1)
+//                                    }
+//                                    .frame(width: 139, height: 42)
+//                                    .frame(maxWidth: 139)
+//                                    HStack(spacing: 0) {
+////                                        Text("Eg. 20").font(.custom("Inter Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 0.3)))
+////                                        TextField("Eg.20", text: $big_blind.value)
+////                                            .multilineTextAlignment(.center)
+////                                            .padding()
+////                                            .keyboardType(.decimalPad)
+//
+//                                        TextField("Eg.20", text: $data.big_blind)
 //                                            .multilineTextAlignment(.center)
 //                                            .padding()
 //                                            .keyboardType(.decimalPad)
-                                        
-                                        TextField("Eg.20", text: $data.big_blind)
-                                            .multilineTextAlignment(.center)
-                                            .padding()
-                                            .keyboardType(.decimalPad)
-                                        
-                                    }
-                                    .frame(maxWidth: 139)
-                                }
-                                .frame(maxWidth: 139)
-                            }
-                            .background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                            .overlay(Rectangle().strokeBorder(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), lineWidth: 1))
-                            
-                            
-                            
-                            
-                        }
-                        .padding(.bottom, 0.0)
-                        
-
-                        Text("10/20 cents at the minimum").font(.system(size: 20, weight: .bold)).foregroundColor(Color(#colorLiteral(red: 0.55, green: 0.56, blue: 0.62, alpha: 1))).padding(.bottom, 8.0)
-                        
-                    }
-                    
-                    
-                }
-                .frame(width: 367, height: 174)
+//
+//                                    }
+//                                    .frame(maxWidth: 139)
+//                                }
+//                                .frame(maxWidth: 139)
+//                            }
+//                            .background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+//                            .overlay(Rectangle().strokeBorder(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), lineWidth: 1))
+//
+//
+//
+//
+//                        }
+//                        .padding(.bottom, 0.0)
+//
+//
+//                        Text("10/20 cents at the minimum").font(.system(size: 20, weight: .bold)).foregroundColor(Color(#colorLiteral(red: 0.55, green: 0.56, blue: 0.62, alpha: 1))).padding(.bottom, 8.0)
+//
+//                    }
+//
+//
+//                }
+//                .frame(width: 367, height: 174)
                 
                 //Player Buy-In
                 Text("Player Buy-In").font(.system(size: 36, weight: .bold)).underline().foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 1))).padding(.bottom, -2.0)

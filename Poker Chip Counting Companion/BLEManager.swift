@@ -5,9 +5,6 @@
 //  Created by Adish Patil on 10/13/22.
 //
 
-//THIS VIEW CODE WAS ADAPTED FROM A BLE Swift TUTORIAL ONLINE
-//https://novelbits.io/intro-ble-mobile-development-ios-part-2/
-
 import Foundation
 import CoreBluetooth
 import UIKit
@@ -200,6 +197,15 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
         // Once this is complete, we just need to wait for the data to come in.
     }
     
+    func buyout_zero(){
+        buy_outs.append(0)
+        buy_outs.append(0)
+        buy_outs.append(0)
+        buy_outs.append(0)
+        print(buy_outs)
+
+        print("didUpdateValueFor")
+    }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
 
