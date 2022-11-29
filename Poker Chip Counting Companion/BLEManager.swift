@@ -177,8 +177,8 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         // Deal with errors (if any).
         if let error = error {
-//            print("Error discovering characteristics: %s", error.localizedDescription)
-////            cleanup()
+            print(" ", error.localizedDescription)
+//            cleanup()
             return
         }
 
