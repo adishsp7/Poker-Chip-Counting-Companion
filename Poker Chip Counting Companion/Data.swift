@@ -126,6 +126,11 @@ class Data: ObservableObject {
         big_blind_int = Double(big_blind) ?? 0
 //        print(big_blind_int)
         
+        red_left = 25;
+        white_left = 25;
+        green_left = 25;
+        blue_left = 25;
+        
         //buy-in
         p1_buyin_int = Double(p1_buyin) ?? 0
         (p1_red_chips, p1_white_chips, p1_green_chips, p1_blue_chips) = chip_calc(buyin: p1_buyin_int)
@@ -163,6 +168,11 @@ class Data: ObservableObject {
     
     }
 
+    var red_left:Int;
+    var white_left:Int;
+    var green_left:Int;
+    var blue_left:Int;
+    
     //Calculating number of colores chips needed to be distributed for each player
     func chip_calc(buyin: Double) -> (red: Int, white:Int, green:Int, blue:Int){
         
@@ -173,7 +183,7 @@ class Data: ObservableObject {
         
         array.sort(by: >)
         for val in array{
-            if(val != 1){
+            if(val != blue_value_int){
                 if(val == array[0]){
                     offset = 3
                 }
@@ -194,7 +204,7 @@ class Data: ObservableObject {
 //                print(r)
             }
             else{
-                chipcount.append(buy_in)
+                chipcount.append(floor((buy_in) / (val)))
                 
             }
 //            print(buy_in)
@@ -204,6 +214,11 @@ class Data: ObservableObject {
         let wc = Int(chipcount[1])
         let gc = Int(chipcount[2])
         let bc = Int(chipcount[3])
+        
+        red_left -= rc;
+        white_left -= wc;
+        green_left -= gc;
+        blue_left -= bc;
         
         print(rc)
         print(wc)
