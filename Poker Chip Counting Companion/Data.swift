@@ -168,10 +168,10 @@ class Data: ObservableObject {
     
     }
 
-    var red_left:Int;
-    var white_left:Int;
-    var green_left:Int;
-    var blue_left:Int;
+    var red_left:Int = 25;
+    var white_left:Int = 25;
+    var green_left:Int = 25;
+    var blue_left:Int = 25;
     
     //Calculating number of colores chips needed to be distributed for each player
     func chip_calc(buyin: Double) -> (red: Int, white:Int, green:Int, blue:Int){
@@ -195,8 +195,15 @@ class Data: ObservableObject {
                 }
                 let r = floor((buy_in) / (val))
                 if(r > 0){
+                    //if (r-offset) <= red_left
+                        // red_left -= (r-offset
+                        
                     chipcount.append(r-offset)
                     buy_in -= (val * (r-offset))
+                    //else
+                        //chipcount.append(red_left)
+                        // buy_in -= val * (red_left)
+                        
                 }
                 else if(r <= 0){
                     chipcount.append(0)
@@ -214,11 +221,11 @@ class Data: ObservableObject {
         let wc = Int(chipcount[1])
         let gc = Int(chipcount[2])
         let bc = Int(chipcount[3])
-        
-        red_left -= rc;
-        white_left -= wc;
-        green_left -= gc;
-        blue_left -= bc;
+//
+//        red_left -= rc;
+//        white_left -= wc;
+//        green_left -= gc;
+//        blue_left -= bc;
         
         print(rc)
         print(wc)
@@ -227,33 +234,6 @@ class Data: ObservableObject {
         
         return(rc, wc, gc, bc)
         
-
-//        buyin = 253
-//        c = [1,5,10,25]
-//        c = c[::-1]
-//        def chips(buyin):
-//            num_each = []
-//            c = [25,10,5,1]
-//            for chip in c:
-//                if (chip!=1):
-//                    if chip == c[0]:
-//                        offset = 5
-//                    elif chip == c[1]:
-//                        offset = 5
-//                    else:
-//                        offset = 2
-//                    R = buyin//chip
-//                    if (R>0):
-//                        num_each += [R-offset]
-//                        buyin -= chip * (R-offset)
-//                    elif(R<=0):
-//                        num_each += [0]
-//                else:
-//                    num_each += [buyin]
-//
-//            return num_each
-//        s = 0
-//        chips(250)
     }
     
     
