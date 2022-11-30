@@ -39,28 +39,9 @@ struct ContentView: View {
                     NavigationLink("Poker Chip \n Counting Companion", destination: DispensingInfo())
                         .padding(.all)
                         .font(.largeTitle.weight(.semibold))
-//                        .background(Color.white)
-                    
-                    //            NavigationView(content: NavigationLink("button", destination: DispensingInfo()))
-                    //            NavigationLink(destination: DispensingInfo(), tag: 1, selection: $action) {}
-                    //
-                    //            NavigationLink("String", destination: DispensingInfo())
-                    //                .padding(.all)
-                    //                .font(.largeTitle)
-                    //                .background(Color.white)
-                    //            Button("Poker Chip \n Counting Companion") {
-                    //                    self.action = 1
-                    //            }
-                    //                                .padding(.all)
-                    //                                .font(.largeTitle)
-                    //                                .background(Color.white)
                     
                     
                     VStack (alignment: .center) {
-                        //                Text("Poker Chip")
-                        //                    .font(.largeTitle)
-                        //                Text("Counting Companion")
-                        //                    .font(.largeTitle)
                         
                         Divider()
                         VStack (alignment: .center){
@@ -81,16 +62,6 @@ struct ContentView: View {
                                 .padding(.all)
                                 .font(.headline)
                                 .fontWeight(.semibold)
-                            
-//                            NavigationLink("Bluetooth Connection", destination: MainView())
-//                                .padding(.all)
-//                                .font(.headline)
-//                                .fontWeight(.semibold)
-                            
-//                            Button("Connect to Bluetooth", action: manager.init_centralmanager)
-//                                                            .padding(.all)
-//                                                            .font(.headline)
-//                                                            .fontWeight(.semibold)
 
                         }
                     }

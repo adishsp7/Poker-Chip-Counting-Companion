@@ -12,20 +12,8 @@ import CoreBluetooth
 
 struct Buyin_Table: View {
     
-//    @Binding var p1_buyin:Int = DispensingInfo.$p1_buyin
     @EnvironmentObject var data:Data
     @EnvironmentObject var bleManager1:BLEManager
-    
-//        @State var p1_buyin:String = ""
-//        @State var p2_buyin:String = ""
-//        @State var p3_buyin:String = ""
-//        @State var p4_buyin:String = ""
-//        @State var p5_buyin:String = ""
-//        @State var p6_buyin:String = ""
-//        @State var p7_buyin:String = ""
-//        @State var p8_buyin:String = ""
-    
-//    var a: DispensingInfo = DispensingInfo(p1_buyin: $p1_buyin, p2_buyin: $p2_buyin,  p3_buyin: $p3_buyin, p4_buyin: $p4_buyin, p5_buyin: $p5_buyin, p6_buyin: $p6_buyin, p7_buyin: $p7_buyin, p8_buyin: $p8_buyin)
     
     var body: some View {
         
@@ -36,17 +24,6 @@ struct Buyin_Table: View {
                 //Chip Dispense
                 Text("Player Buy-In Info ($)").font(.system(size: 35, weight: .bold)).underline().foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 1))).padding(.vertical, 20.0)
 
-//                HStack{
-//                    //Player_1
-//                    Spacer()
-//                    Text("Player 1").font(.system(size: 32, weight: .regular))
-//                    Spacer()
-//                    Text(data.p1_buyin)
-//                    .font(.title)
-//                    .foregroundColor(.red)
-//                    Spacer()
-//                }
-//                .padding(.bottom, 20.0)
                 
                 VStack(spacing: 6) {
                     Text("Player 1").font(.custom("Inter Medium", size: 20)).foregroundColor(Color(.black))
@@ -74,18 +51,7 @@ struct Buyin_Table: View {
                     .frame(maxWidth: 331)
                 }
                 
-                
-//                HStack{
-//                    //Player_2
-//                    Spacer()
-//                    Text("Player 2").font(.system(size: 32, weight: .regular))
-//                    Spacer()
-//                    Text(data.p2_buyin)
-//                    .font(.title)
-//                    .foregroundColor(.red)
-//                    Spacer()
-//                }
-//                .padding(.bottom, 20.0)
+            
                 
                 VStack(spacing: 6) {
                     Text("Player 2").font(.custom("Inter Medium", size: 20)).foregroundColor(Color(.black))
@@ -113,17 +79,6 @@ struct Buyin_Table: View {
                     .frame(maxWidth: 331)
                 }
                 
-//                HStack{
-//                    //Player_3
-//                    Spacer()
-//                    Text("Player 3").font(.system(size: 32, weight: .regular))
-//                    Spacer()
-//                    Text(data.p3_buyin)
-//                    .font(.title)
-//                    .foregroundColor(.red)
-//                    Spacer()
-//                }
-//                .padding(.bottom, 20.0)
                 
                 VStack(spacing: 6) {
                     Text("Player 3").font(.custom("Inter Medium", size: 20)).foregroundColor(Color(.black))
@@ -151,17 +106,6 @@ struct Buyin_Table: View {
                     .frame(maxWidth: 331)
                 }
                 
-//                HStack{
-//                    //Player_4
-//                    Spacer()
-//                    Text("Player 4").font(.system(size: 32, weight: .regular))
-//                    Spacer()
-//                    Text(data.p4_buyin)
-//                    .font(.title)
-//                    .foregroundColor(.red)
-//                    Spacer()
-//                }
-//                .padding(.bottom, 20.0)
                 
                 
                 VStack(spacing: 6) {
@@ -190,17 +134,6 @@ struct Buyin_Table: View {
                     .frame(maxWidth: 331)
                 }
                 
-//                HStack{
-//                    //Player_5
-//                    Spacer()
-//                    Text("Player 5").font(.system(size: 32, weight: .regular))
-//                    Spacer()
-//                    Text(data.p5_buyin)
-//                    .font(.title)
-//                    .foregroundColor(.red)
-//                    Spacer()
-//                }
-//                .padding(.bottom, 20.0)
                 
                 VStack(spacing: 6) {
                     Text("Player 5").font(.custom("Inter Medium", size: 20)).foregroundColor(Color(.black))
@@ -228,17 +161,7 @@ struct Buyin_Table: View {
                     .frame(maxWidth: 331)
                 }
                 
-//                HStack{
-//                    //Player_6
-//                    Spacer()
-//                    Text("Player 6").font(.system(size: 32, weight: .regular))
-//                    Spacer()
-//                    Text(data.p6_buyin)
-//                    .font(.title)
-//                    .foregroundColor(.red)
-//                    Spacer()
-//                }
-//                .padding(.bottom, 20.0)
+
                 
                 VStack(spacing: 6) {
                     Text("Player 6").font(.custom("Inter Medium", size: 20)).foregroundColor(Color(.black))
@@ -266,17 +189,6 @@ struct Buyin_Table: View {
                     .frame(maxWidth: 331)
                 }
                 
-//                HStack{
-//                    //Player_7
-//                    Spacer()
-//                    Text("Player 7").font(.system(size: 32, weight: .regular))
-//                    Spacer()
-//                    Text(data.p7_buyin)
-//                    .font(.title)
-//                    .foregroundColor(.red)
-//                    Spacer()
-//                }
-//                .padding(.bottom, 20.0)
                 
                 VStack(spacing: 6) {
                     Text("Player 7").font(.custom("Inter Medium", size: 20)).foregroundColor(Color(.black))
@@ -305,19 +217,6 @@ struct Buyin_Table: View {
                 }
                 
                 
-                
-//                HStack{
-//                    //Player_8
-//                    Spacer()
-//                    Text("Player 8").font(.system(size: 32, weight: .regular))
-//                    Spacer()
-//                    Text(data.p8_buyin)
-//                    .font(.title)
-//                    .foregroundColor(.red)
-//                    Spacer()
-//                }
-//                .padding(.bottom, 20.0)
-                
                 VStack(spacing: 6) {
                     Text("Player 8").font(.custom("Inter Medium", size: 20)).foregroundColor(Color(.black))
                     .frame(maxWidth: 331)
@@ -344,7 +243,6 @@ struct Buyin_Table: View {
                     .frame(maxWidth: 331)
                 }
                 .padding(.bottom, 5.0)
-//                Button("Collect")
             }
             
             HStack{
@@ -353,7 +251,6 @@ struct Buyin_Table: View {
                 }
                 .font(.title2)
                 .foregroundColor(.green)
-//                .padding(.bottom, -5.0)
                 
                 NavigationLink("Start Collection", destination: Collection_Queue())
                     .padding(.all)

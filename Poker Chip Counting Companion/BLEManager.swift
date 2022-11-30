@@ -136,7 +136,7 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
      */
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         if let error = error {
-            print("Error discovering services: %s", error.localizedDescription)
+            print(" ", error.localizedDescription)
 //            cleanup()
             return
         }
@@ -275,7 +275,7 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
     func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {
         // Deal with errors (if any)
         if let error = error {
-            print("Error changing notification state: %s", error.localizedDescription)
+            print(" ", error.localizedDescription)
             return
         }
 

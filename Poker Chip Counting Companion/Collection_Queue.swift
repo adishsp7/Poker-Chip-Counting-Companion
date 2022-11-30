@@ -243,18 +243,6 @@ struct Collection_Queue: View {
             .foregroundColor(.green)
             .padding(.vertical, 10.0)
             
-//            HStack{
-//                Button(action: {
-//                    self.bleManager1.startScanning()
-//                }) {
-//                    Text("Start Scanning")
-//                }
-//                Button(action: {
-//                    self.bleManager1.stopScanning()
-//                }) {
-//                    Text("Stop Scanning")
-//                }
-//            }
             Spacer()
         }
     }

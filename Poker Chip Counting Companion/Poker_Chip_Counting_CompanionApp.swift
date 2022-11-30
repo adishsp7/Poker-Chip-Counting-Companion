@@ -14,7 +14,6 @@ struct Poker_Chip_Counting_CompanionApp: App {
             ContentView()
                 .environmentObject(Data())
                 .environmentObject(BLEManager())
-//            MainView()
         }
     }
 }

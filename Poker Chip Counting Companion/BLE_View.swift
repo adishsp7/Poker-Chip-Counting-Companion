@@ -59,11 +59,11 @@ struct BLE_View: View {
                             }) {
                                 Text("Stop Scanning")
                             }
-                            Button(action: {
-                                self.bleManager1.writeOutgoingValue(data: "hello")
-                            }) {
-                                Text("test write")
-                            }
+//                            Button(action: {
+//                                self.bleManager1.writeOutgoingValue(data: "hello")
+//                            }) {
+//                                Text("test write")
+//                            }
                         }.padding()
 
                         Spacer()

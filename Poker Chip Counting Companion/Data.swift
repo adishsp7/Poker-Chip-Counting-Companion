@@ -168,64 +168,59 @@ class Data: ObservableObject {
     
     }
 
-    var red_left:Int = 25;
-    var white_left:Int = 25;
-    var green_left:Int = 25;
-    var blue_left:Int = 25;
+    var red_left:Int = 0;
+    var white_left:Int = 0;
+    var green_left:Int = 0;
+    var blue_left:Int = 0;
+    
+    
+    func distance(list: [Double]) -> (Double){
+        let red = list[0]
+        let white = list[1]
+        let green = list[2]
+        let blue = list[3]
+        let dist = pow((red - white),2) + pow((red - green),2) + pow((red - blue),2) + pow((white - green),2) + pow((white - blue),2) + pow((green - blue),2)
+        return Double(dist)
+    }
+    
     
     //Calculating number of colores chips needed to be distributed for each player
     func chip_calc(buyin: Double) -> (red: Int, white:Int, green:Int, blue:Int){
         
-        var array = [red_value_int, white_value_int, green_value_int, blue_value_int]
-        var buy_in:Double = buyin
-        var offset:Double
-        var chipcount = [Double]()
-        
-        array.sort(by: >)
-        for val in array{
-            if(val != blue_value_int){
-                if(val == array[0]){
-                    offset = 3
+        var list_sol = [[Double]]()
+        for num_red in 0...red_left {
+            for num_white in 0...white_left{
+                for num_green in 0...green_left{
+                    for num_blue in 0...blue_left{
+                        if(buyin == (red_value_int * Double(num_red) + white_value_int * Double(num_white) + green_value_int * Double(num_green) + blue_value_int * Double(num_blue))){
+                            let arr = [Double(num_red), Double(num_white), Double(num_green), Double(num_blue)]
+                            list_sol.append(arr)
+                        }
+                    }
                 }
-                else if(val == array[1]){
-                    offset = 3
-                }
-                else{
-                    offset = 2
-                }
-                let r = floor((buy_in) / (val))
-                if(r > 0){
-                    //if (r-offset) <= red_left
-                        // red_left -= (r-offset
-                        
-                    chipcount.append(r-offset)
-                    buy_in -= (val * (r-offset))
-                    //else
-                        //chipcount.append(red_left)
-                        // buy_in -= val * (red_left)
-                        
-                }
-                else if(r <= 0){
-                    chipcount.append(0)
-                }
-//                print(r)
             }
-            else{
-                chipcount.append(floor((buy_in) / (val)))
-                
-            }
-//            print(buy_in)
-//            print(r)
         }
-        let rc = Int(chipcount[0])
-        let wc = Int(chipcount[1])
-        let gc = Int(chipcount[2])
-        let bc = Int(chipcount[3])
-//
-//        red_left -= rc;
-//        white_left -= wc;
-//        green_left -= gc;
-//        blue_left -= bc;
+        
+        var shortest:Double = pow(10, 100)
+        var best = [Double]()
+        for solution in list_sol{
+            let d = distance(list: solution)
+            if(d < shortest){
+                best = solution
+                shortest = d
+            }
+        }
+//        print(shortest)
+
+        let rc = Int(best[0])
+        let wc = Int(best[1])
+        let gc = Int(best[2])
+        let bc = Int(best[3])
+
+        red_left -= rc
+        white_left -= wc
+        green_left -= gc
+        blue_left -= bc
         
         print(rc)
         print(wc)
@@ -237,6 +232,72 @@ class Data: ObservableObject {
     }
     
     
+    
+    
+    //Calculating number of colores chips needed to be distributed for each player
+//    func chip_calc(buyin: Double) -> (red: Int, white:Int, green:Int, blue:Int){
+//
+//        var array = [red_value_int, white_value_int, green_value_int, blue_value_int]
+//        var buy_in:Double = buyin
+//        var offset:Double
+//        var chipcount = [Double]()
+//
+//        array.sort(by: >)
+//        for val in array{
+//            if(val != blue_value_int){
+//                if(val == array[0]){
+//                    offset = 3
+//                }
+//                else if(val == array[1]){
+//                    offset = 3
+//                }
+//                else{
+//                    offset = 2
+//                }
+//                let r = floor((buy_in) / (val))
+//                if(r > 0){
+//                    //if (r-offset) <= red_left
+//                        // red_left -= (r-offset
+//
+//                    chipcount.append(r-offset)
+//                    buy_in -= (val * (r-offset))
+//                    //else
+//                        //chipcount.append(red_left)
+//                        // buy_in -= val * (red_left)
+//
+//                }
+//                else if(r <= 0){
+//                    chipcount.append(0)
+//                }
+////                print(r)
+//            }
+//            else{
+//                chipcount.append(floor((buy_in) / (val)))
+//
+//            }
+////            print(buy_in)
+////            print(r)
+//        }
+//        let rc = Int(chipcount[0])
+//        let wc = Int(chipcount[1])
+//        let gc = Int(chipcount[2])
+//        let bc = Int(chipcount[3])
+////
+////        red_left -= rc;
+////        white_left -= wc;
+////        green_left -= gc;
+////        blue_left -= bc;
+//
+//        print(rc)
+//        print(wc)
+//        print(gc)
+//        print(bc)
+//
+//        return(rc, wc, gc, bc)
+//
+//    }
+    
+    
     func ascii_string_conv(red: Int, white:Int, green:Int, blue:Int) -> String{
         
         var ret:String = "0"
@@ -244,33 +305,6 @@ class Data: ObservableObject {
         ret.append(string4)
         print(ret)
         return ret
-        
-        
-//        var redv:String = String(red)
-//        var bluev:String = String(blue)
-//        var greenv:String = String(green)
-//        var whitev:String = String(white)
-//
-//        var red_ascii = Unicode.Scalar(redv)
-//        let blue_ascii = UnicodeScalar(bluev)
-//        let green_ascii = UnicodeScalar(greenv)
-//        let white_ascii = UnicodeScalar(whitev)
-        
-        
-//        let array = [Unicode.Scalar(redv), Unicode.Scalar(bluev), Unicode.Scalar(greenv), Unicode.Scalar(whitev)]
-        // Or: let array: [UnicodeScalar] = ["f", "o", "o"]
-
-//        var str1 = ""
-//        str1.unicodeScalars.append(contentsOf: array)
-        
-//        let charactersArray = array.map(Character.init)
-//        let newString = String(charactersArray)
-//        print(newString)
-        
-
-//        let unicodeScalarView = String.UnicodeScalarView(array)
-//        let newString = String(unicodeScalarView)
-//        print(newString) // prints: foo
     
     }
     

@@ -58,11 +58,6 @@ struct DispensingInfo: View {
                                     .frame(width: 139, height: 42)
                                     .frame(maxWidth: 139)
                                     HStack(spacing: 0) {
-
-//                                        TextField("Eg.5", text: $red_value.value)
-//                                            .multilineTextAlignment(.center)
-//                                            .padding()
-//                                            .keyboardType(.decimalPad)
                                         
                                         TextField("Eg.5", text: $data.red_value)
                                             .multilineTextAlignment(.center)
@@ -94,11 +89,6 @@ struct DispensingInfo: View {
                                     .frame(width: 139, height: 42)
                                     .frame(maxWidth: 139)
                                     HStack(spacing: 0) {
-//                                        Text("Eg. 5").font(.custom("Inter Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 0.3)))
-//                                        TextField("Eg.5", text: $white_value.value)
-//                                            .multilineTextAlignment(.center)
-//                                            .padding()
-//                                            .keyboardType(.decimalPad)
                                         
                                         TextField("Eg.5", text: $data.white_value)
                                             .multilineTextAlignment(.center)
@@ -129,11 +119,6 @@ struct DispensingInfo: View {
                                     .frame(width: 139, height: 42)
                                     .frame(maxWidth: 139)
                                     HStack(spacing: 0) {
-//                                        Text("Eg. 5").font(.custom("Inter Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 0.3)))
-//                                        TextField("Eg.5", text: $green_value.value)
-//                                            .multilineTextAlignment(.center)
-//                                            .padding()
-//                                            .keyboardType(.decimalPad)
                                         
                                         TextField("Eg.5", text: $data.green_value)
                                             .multilineTextAlignment(.center)
@@ -164,11 +149,6 @@ struct DispensingInfo: View {
                                     .frame(width: 139, height: 42)
                                     .frame(maxWidth: 139)
                                     HStack(spacing: 0) {
-//                                        Text("Eg. 5").font(.custom("Inter Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 0.3)))
-//                                        TextField("Eg.5", text: $blue_value.value)
-//                                            .multilineTextAlignment(.center)
-//                                            .padding()
-//                                            .keyboardType(.decimalPad)
                                         
                                         TextField("Eg.5", text: $data.blue_value)
                                             .multilineTextAlignment(.center)
@@ -192,104 +172,6 @@ struct DispensingInfo: View {
                 .frame(width: 367, height: 284)
                 .padding(.bottom, -5)
                 
-//                //Rectangle 1
-//                ZStack {
-//                    //                Rectangle()
-//                    //                .fill(Color(#colorLiteral(red: 0.9666666388511658, green: 0.9626388549804688, blue: 0.9626388549804688, alpha: 1)))
-//                    //
-//                    //                Rectangle()
-//                    //                .strokeBorder(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), lineWidth: 1)
-//
-//                    VStack {
-//
-//                        //Blinds ($)
-//                        Text("Blinds ($)").font(.system(size: 36, weight: .bold)).underline().foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 1))).padding(.bottom, -4.0)
-//
-//                        HStack{
-//                            //form/03 component/textFiel...
-//                            VStack(spacing: 4) {
-//                                Text("Small Blind").font(.system(size: 16, weight: .medium))
-//                                    .frame(maxWidth: 139)
-//                                ZStack() {
-//                                    ZStack {
-//                                        RoundedRectangle(cornerRadius: 2)
-//                                            .fill(Color(#colorLiteral(red: 0.9882352948188782, green: 0.9882352948188782, blue: 0.9921568632125854, alpha: 1)))
-//
-//                                        RoundedRectangle(cornerRadius: 2)
-//                                            .strokeBorder(Color(#colorLiteral(red: 0.8117647171020508, green: 0.8156862854957581, blue: 0.843137264251709, alpha: 1)), lineWidth: 1)
-//                                    }
-//                                    .frame(width: 139, height: 42)
-//                                    .frame(maxWidth: 139)
-//                                    HStack(spacing: 0) {
-////                                        Text("Eg. 10").font(.custom("Inter Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 0.3)))
-////                                        TextField("Eg.10", text: $small_blind.value)
-////                                            .multilineTextAlignment(.center)
-////                                            .padding()
-////                                            .keyboardType(.decimalPad)
-//
-//                                        TextField("Eg.10", text: $data.small_blind)
-//                                            .multilineTextAlignment(.center)
-//                                            .padding()
-//                                            .keyboardType(.decimalPad)
-//
-//                                    }
-//                                    .frame(maxWidth: 139)
-//                                }
-//                                .frame(maxWidth: 139)
-//                            }
-//                            .background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-//                            .overlay(Rectangle().strokeBorder(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), lineWidth: 1))
-//                            .padding()
-//
-//                            //form/03 component/textFiel...
-//                            VStack(spacing: 4) {
-//                                Text("Big Blind").font(.system(size: 16, weight: .medium))
-//                                    .frame(maxWidth: 139)
-//                                ZStack() {
-//                                    ZStack {
-//                                        RoundedRectangle(cornerRadius: 2)
-//                                            .fill(Color(#colorLiteral(red: 0.9882352948188782, green: 0.9882352948188782, blue: 0.9921568632125854, alpha: 1)))
-//
-//                                        RoundedRectangle(cornerRadius: 2)
-//                                            .strokeBorder(Color(#colorLiteral(red: 0.8117647171020508, green: 0.8156862854957581, blue: 0.843137264251709, alpha: 1)), lineWidth: 1)
-//                                    }
-//                                    .frame(width: 139, height: 42)
-//                                    .frame(maxWidth: 139)
-//                                    HStack(spacing: 0) {
-////                                        Text("Eg. 20").font(.custom("Inter Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 0.3)))
-////                                        TextField("Eg.20", text: $big_blind.value)
-////                                            .multilineTextAlignment(.center)
-////                                            .padding()
-////                                            .keyboardType(.decimalPad)
-//
-//                                        TextField("Eg.20", text: $data.big_blind)
-//                                            .multilineTextAlignment(.center)
-//                                            .padding()
-//                                            .keyboardType(.decimalPad)
-//
-//                                    }
-//                                    .frame(maxWidth: 139)
-//                                }
-//                                .frame(maxWidth: 139)
-//                            }
-//                            .background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-//                            .overlay(Rectangle().strokeBorder(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), lineWidth: 1))
-//
-//
-//
-//
-//                        }
-//                        .padding(.bottom, 0.0)
-//
-//
-//                        Text("10/20 cents at the minimum").font(.system(size: 20, weight: .bold)).foregroundColor(Color(#colorLiteral(red: 0.55, green: 0.56, blue: 0.62, alpha: 1))).padding(.bottom, 8.0)
-//
-//                    }
-//
-//
-//                }
-//                .frame(width: 367, height: 174)
-                
                 //Player Buy-In
                 Text("Player Buy-In").font(.system(size: 36, weight: .bold)).underline().foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 1))).padding(.bottom, -2.0)
                 //form/02 element/info/default
@@ -312,11 +194,6 @@ struct DispensingInfo: View {
                             .frame(width: 331, height: 42)
                             .frame(maxWidth: 331)
                             HStack(spacing: 0) {
-//                                Text("Eg. 20").font(.custom("Inter Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 0.3)))
-//                                TextField("Eg.20", text: $p1_buyin.value)
-//                                    .multilineTextAlignment(.center)
-//                                    .padding()
-//                                    .keyboardType(.decimalPad)
                                 
                                 TextField("Eg.20", text: $data.p1_buyin)
                                     .multilineTextAlignment(.center)
@@ -344,11 +221,6 @@ struct DispensingInfo: View {
                             .frame(width: 331, height: 42)
                             .frame(maxWidth: 331)
                             HStack(spacing: 0) {
-//                                Text("Eg. 20").font(.custom("Inter Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 0.3)))
-//                                TextField("Eg.20", text: $p2_buyin.value)
-//                                    .multilineTextAlignment(.center)
-//                                    .padding()
-//                                    .keyboardType(.decimalPad)
                                 
                                 TextField("Eg.20", text: $data.p2_buyin)
                                     .multilineTextAlignment(.center)
@@ -376,11 +248,6 @@ struct DispensingInfo: View {
                             .frame(width: 331, height: 42)
                             .frame(maxWidth: 331)
                             HStack(spacing: 0) {
-//                                Text("Eg. 20").font(.custom("Inter Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 0.3)))
-//                                TextField("Eg.20", text: $p3_buyin.value)
-//                                    .multilineTextAlignment(.center)
-//                                    .padding()
-//                                    .keyboardType(.decimalPad)
                                 
                                 TextField("Eg.20", text: $data.p3_buyin)
                                     .multilineTextAlignment(.center)
@@ -408,11 +275,6 @@ struct DispensingInfo: View {
                             .frame(width: 331, height: 42)
                             .frame(maxWidth: 331)
                             HStack(spacing: 0) {
-//                                Text("Eg. 20").font(.custom("Inter Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 0.3)))
-//                                TextField("Eg.20", text: $p4_buyin.value)
-//                                    .multilineTextAlignment(.center)
-//                                    .padding()
-//                                    .keyboardType(.decimalPad)
                                 
                                 TextField("Eg.20", text: $data.p4_buyin)
                                     .multilineTextAlignment(.center)
@@ -441,11 +303,6 @@ struct DispensingInfo: View {
                             .frame(width: 331, height: 42)
                             .frame(maxWidth: 331)
                             HStack(spacing: 0) {
-//                                Text("Eg. 20").font(.custom("Inter Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 0.3)))
-//                                TextField("Eg.20", text: $p5_buyin.value)
-//                                    .multilineTextAlignment(.center)
-//                                    .padding()
-//                                    .keyboardType(.decimalPad)
                                 
                                 TextField("Eg.20", text: $data.p5_buyin)
                                     .multilineTextAlignment(.center)
@@ -473,11 +330,6 @@ struct DispensingInfo: View {
                             .frame(width: 331, height: 42)
                             .frame(maxWidth: 331)
                             HStack(spacing: 0) {
-//                                Text("Eg. 20").font(.custom("Inter Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 0.3)))
-//                                TextField("Eg.20", text: $p6_buyin.value)
-//                                    .multilineTextAlignment(.center)
-//                                    .padding()
-//                                    .keyboardType(.decimalPad)
                                 
                                 TextField("Eg.20", text: $data.p6_buyin)
                                     .multilineTextAlignment(.center)
@@ -505,11 +357,6 @@ struct DispensingInfo: View {
                             .frame(width: 331, height: 42)
                             .frame(maxWidth: 331)
                             HStack(spacing: 0) {
-//                                Text("Eg. 20").font(.custom("Inter Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 0.3)))
-//                                TextField("Eg.20", text: $p7_buyin.value)
-//                                    .multilineTextAlignment(.center)
-//                                    .padding()
-//                                    .keyboardType(.decimalPad)
                                 
                                 TextField("Eg.20", text: $data.p7_buyin)
                                     .multilineTextAlignment(.center)
@@ -537,11 +384,7 @@ struct DispensingInfo: View {
                             .frame(width: 331, height: 42)
                             .frame(maxWidth: 331)
                             HStack(spacing: 0) {
-//                                Text("Eg. 20").font(.custom("Inter Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.1, green: 0.13, blue: 0.24, alpha: 0.3)))
-//                                TextField("Eg.20", text: $p8_buyin.value)
-//                                    .multilineTextAlignment(.center)
-//                                    .padding()
-//                                    .keyboardType(.decimalPad)
+
                                 
                                 TextField("Eg.20", text: $data.p8_buyin)
                                     .multilineTextAlignment(.center)
@@ -574,9 +417,6 @@ struct DispensingInfo: View {
         }
     }
     
-//    func call_data_store(){
-//        data.data_store()
-//    }
 }
 
 struct DispensingInfo_Previews: PreviewProvider {

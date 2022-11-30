@@ -15,10 +15,7 @@ struct Dispensing_Queue: View {
     @State private var disable6: Bool = true
     @State private var disable7: Bool = true
     @State private var disable8: Bool = true
-    
-//    @ObservedObject private var manager = BluetoothManager.shared
-//    @EnvironmentObject var manager:BluetoothManager
-//    @ObservedObject var bleManager1 = BLEManager()
+
     
     @EnvironmentObject var bleManager1:BLEManager
     @EnvironmentObject var data:Data
