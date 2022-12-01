@@ -129,7 +129,7 @@ class Data: ObservableObject {
         red_left = 25;
         white_left = 25;
         green_left = 25;
-        blue_left = 25;
+        blue_left = 23;
         
         //buy-in
         p1_buyin_int = Double(p1_buyin) ?? 0
