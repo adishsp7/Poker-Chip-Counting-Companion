@@ -1,0 +1,4 @@
+Poker Chip Counting Companion Repository - 
+Group 16 - Adish Patil, David Hahn, Forrest Hare
+
+Abstract: The Poker Chip Counting Companion is a product designed to accurately count chips and reduce the inconveniences of setting up and concluding a game of poker. With this device, playing a game of poker with your friends becomes a more fair and smoother experience. With a simple mobile application, users can easily input information (chip values and player buy-ins) and receive the correct chip distribution from the machine. At the end of the game, players can deposit their remaining chips in the machine and have their buy-out instantly presented on the app. Players no longer have to hand-count chips or calculate how much they’re owed at the end of a game. Our product takes care of this and lets players enjoy the game of poker! 
