@@ -1,7 +1,7 @@
 //
 //  BLEManager.swift
 //  Poker Chip Counting Companion
-//
+//  Created using Core Bluetooh Docs on Apple Developer Website https://developer.apple.com/documentation/corebluetooth/transferring_data_between_bluetooth_low_energy_devices
 //  Created by Adish Patil on 10/13/22.
 //
 
